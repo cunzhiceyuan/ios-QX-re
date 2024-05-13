@@ -76,5 +76,4 @@
 # via-interface：指定出站接口
 
 # 另外，还可以直接在「设置」底部的「其他设置」中，全局设置「出站接口」。*/
-HOST-SUFFIX,photos.com,j124
-HOST-SUFFIX,lkcoffee.com,j124
+HOST-SUFFIX,is.gd,j124
