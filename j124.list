@@ -1,2 +1,79 @@
 # 该规则集用于配合“j124” 使用。
+# HOST 域名 
+# 复制
+# [filter_local]
+# HOST,www.google.com,policy 
+# 当请求的域名完全匹配时，则执行该规则将 www.google.com 通过 policy⁠ 指定的策略连接。
+
+# HOST-SUFFIX 域名后缀 
+# 复制
+# [filter_local]
+# HOST-SUFFIX,youtube.com,policy 
+# 匹配域名及其子域名，将任何以 youtube.com 结尾的域名通过 policy⁠ 指定的策略连接在这种情况下, www.youtube.com 和 foo.bar.youtube.com 都将通过 policy⁠ 指定的策略连接，但是不会匹配youtube.uk或者ukyoutube.com。
+
+# HOST-KEYWORD 域名关键字 
+# 复制
+# [filter_local]
+# HOST-KEYWORD,google,policy 
+# 将任何包含 google 关键字的域名通过 policy⁠ 指定的策略连接在这种情况下, www.google.com 或 googleapis.com 都将将通过 policy⁠ 指定的策略连接。
+
+# HOST-WILDCARD 域名通配符
+# 复制
+# [filter_local]
+# host-wildcard,*abc.com,policy
+# 将任何匹配 *abc.com 的域名通过 policy⁠ 指定的策略连接。因该条规则消耗性能较大，不建议使用。
+
+# GEOIP IP地理位置 (国家代码) 
+# GEOIP 规则用于根据数据包的目标 IP 地址的国家代码路由数据包. QX使用 MaxMind GeoLite2数据库来实现这一功能.
+
+# 复制
+# [filter_local]
+# GEOIP,CN,DIRECT
+# 将任何目标 IP 地址为中国的数据通过 DIRECT⁠ 策略连接(即中国的域名/IP走直连)。
+
+# IP-CIDR/IP6-CIDR IP地址段 
+# IP-CIDR 规则用于根据数据包的目标 IPv4/IPv6 地址路由数据包.
+
+# 复制
+# [filter_local]
+# IP-CIDR,127.0.0.0/8,policy 
+# IP6-CIDR,2620:0:2d0:200::7/32,policy
+# 将任何目标 IP 地址为 127.0.0.0/8 、2620:0:2d0:200::7/32的数据将通过 policy⁠ 指定的策略连接。如果不清楚这里的 /32 与 /128，需要自行了解「CIDR」与「子网掩码」，还可以搜索「子网掩码计算器」获取帮助。
+
+# IP-ASN
+# 通过 IP 自治系统编号，比如 IP-ASN,714。
+
+# USER-AGENT
+# USER-AGENT,Instagram*,DIRECT
+
+# 这个规则匹配相应的 USER-AGENT，可以使用像 * 或者 ? 这样的通配符
+
+# 在 iOS 15 系统后，系统出于隐私保护考虑，不再于 CONNECT 请求中提供 User-Agent，这意味着对于所有 HTTPS 请求，在未开启 MITM 时，User-Agent 均不可见且规则无法生效。
+
+# FINAL 全匹配 
+# 复制
+# [filter_local]
+# FINAL,policy
+# FINAL 规则用于没有匹配到的规则。 该规则是必需的, 通常用作最后一条规则。FINAL,policy 将没有匹配到的规则通过 policy 指定的策略连接。
+
+# 规则参数
+# 默认情况下，即不带上参数时，则当处于 Wi-Fi 网络时使用 Wi-Fi 数据，当处于仅蜂窝网络时使用网络数据，
+
+# 复制
+# [filter_local]
+# host-suffix, qq.com, direct, force-cellular
+# host-suffix, qq.com, direct, multi-interface
+# host-suffix, qq.com, direct, multi-interface-balance
+# host-suffix, qq.com, direct, via-interface=pdp_ip0
+# 可以使用几个参数来指定规则的出站接口：
+
+# force-cellular：当处于 Wi-Fi 网络时仍使用蜂窝网络数据；
+
+# multi-interface：当处于 Wi-Fi网络时，同时使用 Wi-Fi 网络与蜂窝网络建立 TCP 连接，使用拥有最佳 TCP 握手值的连接来传输数据。
+
+# multi-interface-balance：当处于 Wi-Fi 网络时，均衡使用 Wi-Fi 网络与蜂窝网络，以提升并发任务的出口带宽。
+
+# via-interface：指定出站接口
+
+# 另外，还可以直接在「设置」底部的「其他设置」中，全局设置「出站接口」。*/
 HOST-SUFFIX,photos.com,j124
