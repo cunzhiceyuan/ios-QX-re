@@ -5,15 +5,15 @@
 贪吃猫：https://apps.apple.com/app/id6476010032
 
 [rewrite_local]
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body  https://paste.srlihg.link/~tcm
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body  https://raw.githubusercontent.com/cunzhiceyuan/iios/main/lanjiemao.js
 
 [MITM]
 hostname = buy.itunes.apple.com
 
 */
-var chxm1023 = JSON.parse($response.body);
+var heihei = JSON.parse($response.body);
 
-chxm1023 = {
+heihei = {
   "status" : 0,
   "receipt" : {
     "receipt_type" : "Production",
@@ -104,7 +104,7 @@ chxm1023 = {
       "original_purchase_date" : "2023-06-06 16:06:07 Etc/GMT"
     }
   ],
-  "latest_receipt" : "chxm1023",
+  "latest_receipt" : "heihei",
   "environment" : "Production",
   "pending_renewal_info" : [
     {
@@ -115,9 +115,8 @@ chxm1023 = {
     }
   ],
   "warning" : "仅供学习，禁止转载或售卖",
-  "Telegram" : "。。。"
 };
 
 console.log('已成功🎉🎉🎉:好用记得去AppStore五星好评✅');
 
-$done({body: JSON.stringify(chxm1023)});
+$done({body: JSON.stringify(heihei)});
