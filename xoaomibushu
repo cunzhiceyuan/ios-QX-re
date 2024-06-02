@@ -1,0 +1,46 @@
+/*
+api接口来自作者Mingyu：
+https://github.com/ymyuuu/Steps-API
+*/
+
+
+
+
+
+/*
+❕使用教程
+1.下载Zeep Life记住账号密码与要刷的步数填写到下方encodeURIComponent中
+2.app里面--我的👉第三方接入👉绑定微信或者支付宝
+3.下载xiaomibushu.js文件放在--我的iphone👉QuantumultX👉Scripts👉xiaomibushu.js
+4.设置定时任务，打开圈x进入--设置👉HTTP请求👉右上角添加👉高级👉输入标签名，Cron表达式（如11 10 * * 1-7  表示周一到周日的10:11运行该脚本），脚本路径点本地选择xiaomibushu.js然后保存
+
+*/
+
+// 输入账号名
+const account = encodeURIComponent("账号");
+
+//输入账号的密码
+const password = encodeURIComponent("密码");
+
+//输入要刷的步数默认20000-50000
+const steps = Math.floor(Math.random() * (50000 - 20000 + 1)) + 20000;
+const encodedSteps = encodeURIComponent("steps");
+
+const url = `https://steps.api.030101.xyz/api?account=${account}&password=${password}&steps=${encodedSteps}`;
+
+
+const method = "GET";
+const myRequest = {
+    url: url,
+    method: method,
+};
+
+
+$task.fetch(myRequest).then(response => {
+    console.log("Status: " + response.statusCode);
+    console.log("Response: \n" + response.body);
+    $done();
+}, reason => {
+    console.log("Error: " + reason.error);
+    $done();
+});
