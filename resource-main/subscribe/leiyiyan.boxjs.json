@@ -1,0 +1,371 @@
+{
+  "id": "Leiyiyan.sub",
+  "name": "Leiyiyan脚本订阅",
+  "author": "@leiyiyan",
+  "icon": "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/pyy.png",
+  "repo": "",
+  "apps": [
+    {
+      "id": "Code Server",
+      "name": "Code Server",
+      "author": "仅作学习交流",
+      "repo": "",
+      "descs_html": [
+        "<p style='margin-left:20px;'>本接口及源码仅限学习研究，严禁将接口使用于电信诈骗、网络赌博、恶意营销、非法传销 等违法活动，引起任何法律责任概不负责。</p>"
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/pyy.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/pyy.png"
+      ],
+      "keys": [
+        "codeServer"
+      ],
+      "settings": [
+        {
+          "id": "@codeServer.open",
+          "name": "开启code模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },{
+          "id": "@codeServer.address",
+          "name": "服务器地址",
+          "val": "",
+          "type": "text",
+          "desc": "填入服务器地址，如http://127.0.0.1:99"
+        },{
+          "id": "@codeServer.wxId",
+          "name": "微信wxId",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "微信wxId,多账号用,分隔，非必需参数，仅当服务器有需求时填入"
+        }
+      ]
+    },
+    {
+      "id": "Leiyiyan_Netease",
+      "name": "网易云音乐签到",
+      "author": "@leiyiyan",
+      "repo": "",
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/netease_music.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/netease_music.png"
+      ],
+      "keys": [
+        "Netease_Musician_Cookie",
+        "Netease_Musician_UserAgent",
+        "Netease_Musician_FansId",
+        "Netease_Musician_Enable_Cloud_Shell_Task",
+        "Netease_Musician_Enable_Musician_Task",
+        "Netease_Musician_Enable_Vip_Task"
+      ],
+      "settings": [
+        {
+          "id": "Netease_Musician_Enable_Cloud_Shell_Task",
+          "name": "开启云贝任务",
+          "val": true,
+          "type": "boolean",
+          "desc": "默认开启"
+        },{
+          "id": "Netease_Musician_Enable_Musician_Task",
+          "name": "开启音乐人任务",
+          "val": true,
+          "type": "boolean",
+          "desc": "默认开启"
+        },{
+          "id": "Netease_Musician_Enable_Vip_Task",
+          "name": "开启会员任务",
+          "val": true,
+          "type": "boolean",
+          "desc": "默认开启"
+        },{
+          "id": "Netease_Musician_Cookie",
+          "name": "网易云音乐Cookie数据",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": true,
+          "desc": "网易云音乐Cookie数据"
+        },{
+          "id": "Netease_Musician_UserAgent",
+          "name": "网易云音乐User-Agent数据",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": true,
+          "desc": "网易云音乐User-Agent数据"
+        },{
+          "id": "Netease_Musician_FansId",
+          "name": "网易云音乐粉丝ID数据",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 1,
+          "desc": "网易云音乐粉丝ID数据"
+        }
+      ]
+    },
+    {
+      "id": "Leiyiyan_Aliyun_Web",
+      "name": "阿里云社区",
+      "author": "@leiyiyan",
+      "repo": "",
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/aliyun_web.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/aliyun_web.png"
+      ],
+      "keys": [
+        "is_debug",
+        "aliyunWeb_data",
+        "aliyunWeb_time"
+      ],
+      "settings": [
+        {
+          "id": "is_debug",
+          "name": "开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "aliyunWeb_data",
+          "name": "阿里云社区Cookie数据",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": true,
+          "desc": "阿里云社区Cookie数据"
+        },
+        {
+          "id": "aliyunWeb_time",
+          "name": "阿里云社区控制时间",
+          "val": "12",
+          "type": "input",
+          "desc": "早于该时间则执行任务，晚于该时间则领取积分，默认: 12(即中午12点，为避免出现乱七八糟的问题，请设置: 1-23的整数)"
+        }
+      ]
+    },
+    {
+      "id": "Leiyiyan_Aliyun_Web_CK",
+      "name": "阿里云社区同步青龙",
+      "author": "@leiyiyan",
+      "repo": "",
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/aliyun_web.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/aliyun_web.png"
+      ],
+      "keys": [
+        "aliyunWeb_QL"
+      ],
+      "settings": [
+        {
+          "id": "is_debug",
+          "name": "开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "@aliyunWeb_QL.host",
+          "name": "青龙服务器地址",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "填入服务器地址，不包括/，如http://127.0.0.1:5700"
+        },{
+          "id": "@aliyunWeb_QL.clientId",
+          "name": "clientId",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "填入青龙应用的clientId"
+        },
+        {
+          "id": "@aliyunWeb_QL.secret",
+          "name": "secret",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "填入青龙应用的secret"
+        },
+        {
+          "id": "@aliyunWeb_QL.envName",
+          "name": "变量名称",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "填入要同步到青龙的变量名称，默认：aliyunWeb_data"
+        },
+        {
+          "id": "@aliyunWeb_QL.taskName",
+          "name": "任务名称",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 1,
+          "desc": "填入要运行的青龙的任务名称，默认：阿里云社区"
+        },
+        {
+          "id": "@aliyunWeb_QL.autoRunTask",
+          "name": "开启自动运行任务",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        }
+      ]
+    },
+    {
+      "id": "Leiyiyan_Cfmoto",
+      "name": "春风摩托",
+      "author": "@leiyiyan",
+      "repo": "",
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/cfmoto.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/cfmoto.png"
+      ],
+      "keys": [
+        "is_debug",
+        "cfmoto_data"
+      ],
+      "settings": [
+        {
+          "id": "is_debug",
+          "name": "开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },{
+          "id": "cfmoto_data",
+          "name": "春风摩托Cookie数据",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": true,
+          "desc": "春风摩托Cookie数据"
+        }
+      ]
+    },
+    {
+      "id": "Leiyiyan_Xingma",
+      "name": "星妈优选小程序",
+      "author": "@leiyiyan",
+      "repo": "",
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/xmyx.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/xmyx.png"
+      ],
+      "keys": [
+        "is_debug",
+        "xmyx_data"
+      ],
+      "settings": [
+        {
+          "id": "is_debug",
+          "name": "开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },{
+          "id": "xmyx_data",
+          "name": "星妈优选小程序Token",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": true,
+          "desc": "星妈优选小程序Token"
+        }
+      ]
+    },
+    {
+      "id": "Leiyiyan_Longhu",
+      "name": "龙湖天街小程序",
+      "author": "@leiyiyan",
+      "repo": "",
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/lhtj.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/lhtj.png"
+      ],
+      "keys": [
+        "is_debug",
+        "lhtj_data"
+      ],
+      "settings": [
+        {
+          "id": "is_debug",
+          "name": "开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },{
+          "id": "lhtj_data",
+          "name": "龙湖天街小程序Token",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": true,
+          "desc": "龙湖天街小程序Token"
+        }
+      ]
+    },
+    {
+      "id": "Leiyiyan_Wanda",
+      "name": "万达智慧商业小程序",
+      "author": "@leiyiyan",
+      "repo": "",
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/wdzhsy.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/wdzhsy.png"
+      ],
+      "keys": [
+        "is_debug",
+        "wdzhsy_token"
+      ],
+      "settings": [
+        {
+          "id": "is_debug",
+          "name": "开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },{
+          "id": "wdzhsy_token",
+          "name": "万达智慧商业小程序Token",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": true,
+          "desc": "万达智慧商业小程序Token"
+        }
+      ]
+    },
+    {
+      "id": "Leiyiyan_Ningji",
+      "name": "柠季小程序",
+      "author": "@leiyiyan",
+      "repo": "",
+      "icons": [
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/ningji.png",
+        "https://raw.githubusercontent.com/leiyiyan/resource/main/icons/ningji.png"
+      ],
+      "keys": [
+        "is_debug",
+        "ningji_data"
+      ],
+      "settings": [
+        {
+          "id": "is_debug",
+          "name": "开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },{
+          "id": "ningji_data",
+          "name": "柠季小程序Token",
+          "val": null,
+          "type": "textarea",
+          "autoGrow": true,
+          "desc": "柠季小程序Token"
+        }
+      ]
+    }
+  ]
+}
