@@ -5,7 +5,7 @@
 贪吃猫：https://apps.apple.com/app/id6476010032
 
 [rewrite_local]
-^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body  https://raw.githubusercontent.com/cunzhiceyuan/iios/main/lanjiemao.js
+^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body  https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/lanjiemao.js
 
 [MITM]
 hostname = buy.itunes.apple.com
