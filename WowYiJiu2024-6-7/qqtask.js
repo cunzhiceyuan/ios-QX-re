@@ -35,8 +35,8 @@ Lost Rivers：https://y.qq.com/n/ryqq/songDetail/002cqdkU0UC9xS songId 2647084
 hostname = *.y.qq.com
 
 [rewrite_local]
-https://c6.y.qq.com/shop/fcgi-bin/fcg_get_order? url script-request-header https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js
-https://u6.y.qq.com/cgi-bin/musics.fcg? url script-request-header https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js
+https://c6.y.qq.com/shop/fcgi-bin/fcg_get_order? url script-request-header https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/WowYiJiu2024-6-7/qqmusic-1.js
+https://u6.y.qq.com/cgi-bin/musics.fcg? url script-request-header https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/WowYiJiu2024-6-7/qqmusic-2.js
 
 [rewrite_remote]
 https://raw.githubusercontent.com/WowYiJiu/Personal/main/rewrite/get_qqMusic_cookie.conf, tag=QQ音乐, update-interval=172800, opt-parser=false, enabled=false
