@@ -4,6 +4,7 @@
 
 
 
+
 [Script]
 抖音去水印 = type=http-request,pattern=^https:\/\/www\.iesdouyin\.com\/web\/api\/v2\/aweme\/post,requires-body=0,max-size=0,binary-body-mode=0,script-path=抖音去水印.js,debug=1,timeout=20
 
