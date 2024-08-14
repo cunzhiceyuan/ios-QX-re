@@ -1,0 +1,11 @@
+#!name=抖音下载去水印
+#!desc=配合捷径使用
+#!捷径=https://www.icloud.com/shortcuts/eb314d74acf144709d52c98e6087501b
+
+
+
+[Script]
+抖音去水印 = type=http-request,pattern=^https:\/\/www\.iesdouyin\.com\/web\/api\/v2\/aweme\/post,requires-body=0,max-size=0,binary-body-mode=0,script-path=抖音去水印.js,debug=1,timeout=20
+
+[MITM]
+hostname = %APPEND% www.iesdouyin.com
