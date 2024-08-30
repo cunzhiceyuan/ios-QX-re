@@ -133,5 +133,5 @@ HOST-SUFFIX,jhnews.com.cn,direct
 # 另外，还可以直接在「设置」底部的「其他设置」中，全局设置「出站接口」。*/
 
 
-HOST-SUFFIX,is.gd,j124
-HOST-SUFFIX,v2ex.com,j124
+HOST-SUFFIX,is.gd,telegram 
+HOST-SUFFIX,v2ex.com,telegram 
