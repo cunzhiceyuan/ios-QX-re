@@ -8,7 +8,7 @@
 重写:打开小程序，进入我的页面，点击优惠券页面获取token。支持多账号。
 
 [Script]
-http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://aaroy-my.sharepoint.com/personal/zzroy_aaroy_onmicrosoft_com/_layouts/52/download.aspx?share=EVyaBHk9mEVGm6odtf6zdAQByqBh6u4nHI54IuWhoXISqA, requires-body=true, timeout=60, tag=顺丰速运获取token
+http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/dele-sf-sf.js, requires-body=true, timeout=60, tag=顺丰速运获取token
 
 [MITM]
 hostname = mcs-mimp-web.sf-express.com
