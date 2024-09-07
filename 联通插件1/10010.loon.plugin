@@ -10,7 +10,7 @@
 http-response ^https?:\/\/m\.client\.10010\.com\/mobileService\/onLine\.htm script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010_capture.js, requires-body=true, timeout=120, tag=10010v4-response
 
 # > Cron
-cron "*/5 * * * *" script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js, timeout=120, tag=10010v4-cron
+cron "30 10,18 * * * *" script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js, timeout=120, tag=10010v4-cron
 
 # > Request
 http-request ^https?:\/\/10010v4\.com script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js, timeout=120, tag=10010v4-request
