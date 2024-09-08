@@ -1,10 +1,35 @@
 
 {
   "id": "cunzhiceyuan.app.sub",
-  "name": "DomplingYaYa 应用订阅",
+  "name": "cunzhiceyuan-sub",
   "author": "网络收集",
   "icon": "https://avatars3.githubusercontent.com/u/23498579?s=460&u=1e87605e4abc4e6ecf3edd8b1d730227f54db4d4&v=4",
-  "repo": "https://raw.githubusercontent.com/dompling/Script/master/dompling.boxjs.json",
+  "repo": "https://github.com/ChinaTelecomOperators/ChinaTelecom/releases/download/Prerelease-Alpha/Tele.json
+https://raw.githubusercontent.com/dompling/Script/master/dompling.boxjs.json
+https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
+https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/boxjs.json
+https://raw.githubusercontent.com/wuhuhuuuu/study/main/Scripts/wuhuhuuuu.boxjs.json
+https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/boxjs.json
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.json
+https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/BoxJs/Cloudflare.boxjs.json
+https://qxnav.com/rules/QuantumultX/qixin.boxjs.json
+https://github.com/VirgilClyne/iRingo/raw/main/BoxJs/iRingo.BoxJs.json
+https://raw.githubusercontent.com/NobyDa/Script/master/NobyDa_BoxJs.json
+https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/boxjs.json
+https://raw.githubusercontent.com/leiyiyan/resource/main/subscribe/leiyiyan.boxjs.json
+https://gist.githubusercontent.com/Sliverkiss/18bd01be356360a8065a21ea71685ad3/raw/sliverkiss.boxjs.json
+https://raw.githubusercontent.com/lowking/Scripts/master/lowking.boxjs.json
+https://raw.githubusercontent.com/zZPiglet/Task/master/zZPiglet.boxjs.json
+https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/boxjs.json
+https://raw.githubusercontent.com/chouchoui/QuanX/master/vei.boxjs.json
+https://raw.githubusercontent.com/toulanboy/scripts/master/toulanboy.boxjs.json
+https://raw.githubusercontent.com/WowYiJiu/Personal/main/WowYiJiu.box.json
+https://raw.githubusercontent.com/ClydeTime/BiliBili/main/boxjs/BiliBili.boxjs.json
+https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
+https://raw.githubusercontent.com/githubdulong/Script/master/boxjs.json
+https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/box.js.json
+https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/boxjs.json
+https://gist.githubusercontent.com/Sliverkiss/18bd01be356360a8065a21ea",
   "apps": [
     {
       "id": "10010Ck",
