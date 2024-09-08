@@ -8990,7 +8990,7 @@
               "https://raw.githubusercontent.com/NobyDa/mini/master/Color/ctrip.png"
           ]
       },
-      {
+             {
           "id": "GoogleCAPTCHA",
           "name": "Google搜索人机验证",
           "keys": [
@@ -9029,35 +9029,6 @@
               "https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/Google.png",
               "https://raw.githubusercontent.com/NobyDa/mini/master/Color/Google.png"
           ]
-      }
-  ],
-  "task": [
-      {
-          "config": "30 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/Ctrip-DailyBonus/Ctrip.js, tag=携程旅行签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/ctrip.png",
-          "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/CtripAuth.snippet, tag=携程旅行(获取授权)"
-      },
-      {
-          "config": "5 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, tag=爱奇艺签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/iQIYI.png",
-          "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/iQiYiCookie.snippet, tag=爱奇艺(获取Cookie)"
-      },
-      {
-          "config": "10 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js, tag=哔哩漫画签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/manga.png",
-          "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/BiliComicCookie.snippet, tag=哔哩漫画(获取Cookie)"
-      },
-      {
-          "config": "10,20,30 0 12 * * * https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/ExchangePoints.js, tag=哔哩漫画抢券, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/manga.png",
-          "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/BiliComicCookie.snippet, tag=哔哩漫画(获取Cookie)"
-      },
-      {
-          "config": "15 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js, tag=百度贴吧签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/tieba.png",
-          "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/TieBaCookie.snippet, tag=百度贴吧(获取Cookie)"
-      },
-      {
-          "config": "25 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, tag=快看漫画签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/KuaiKan.png",
-          "addons": "https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/KuaiKanCookie.snippet, tag=快看漫画(获取Cookie)"
-      },
-      {
-          "config": "0 8 * * * https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutDailyBonus.js, tag=巴哈姆特签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/bahamutGame.png"
       },
       
         {
