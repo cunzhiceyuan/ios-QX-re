@@ -1,4 +1,4 @@
-copyhttp://boxjs.com/#/sub/add/https://raw.githubusercontent.com/xzxxn777/Surge/main/xzxxn.json
+http://boxjs.com/#/sub/add/https://raw.githubusercontent.com/xzxxn777/Surge/main/xzxxn.json
 
 http://boxjs.com/#/sub/add/https://raw.githubusercontent.com/dompling/Script/master/dompling.boxjs.json
 
