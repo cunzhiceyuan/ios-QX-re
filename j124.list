@@ -132,7 +132,7 @@ HOST-SUFFIX,jhnews.com.cn,direct
 # via-interface：指定出站接口
 
 # 另外，还可以直接在「设置」底部的「其他设置」中，全局设置「出站接口」。*/
-
+HOST-SUFFIX,gemini.com,Claude、copilot、chatgpt
 
 HOST-SUFFIX,bonree.com,reject 
 HOST-SUFFIX,m.youzan.com,reject 
