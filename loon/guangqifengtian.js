@@ -1,6 +1,6 @@
 #!name=广汽丰田丰云行
 #!desc=去开屏广告
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1100.png
+#!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/%E4%B8%B0%E4%BA%91%E8%A1%8C-iOS-512x512.png?raw=true
 
 [Rewrite]
 # 去开屏广告
