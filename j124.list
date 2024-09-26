@@ -134,6 +134,21 @@ HOST-SUFFIX,jhnews.com.cn,direct
 # 另外，还可以直接在「设置」底部的「其他设置」中，全局设置「出站接口」。*/
 HOST-SUFFIX,gemini.com,Claude、copilot、chatgpt
 
+HOST-SUFFIX,appcloud.zhihu.com, REJECT
+HOST-SUFFIX,appcloud2.in.zhihu.com, REJECT
+HOST-SUFFIX,crash2.zhihu.com, REJECT
+HOST-SUFFIX,mqtt.zhihu.com, REJECT
+HOST-SUFFIX,sugar.zhihu.com, REJECT
+HOST-SUFFIX,zxid-m.mobileservice.cn, REJECT
+IP-CIDR,103.41.167.237/32, REJECT
+IP-CIDR,118.89.204.198/32, REJECT
+IP6-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
+
+
+
+
+
+
 HOST-SUFFIX,bonree.com,reject 
 HOST-SUFFIX,m.youzan.com,reject 
 HOST-SUFFIX,is.gd,proxy
