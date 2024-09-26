@@ -1,6 +1,6 @@
 #!name=三得利
 #!desc=三得利
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1026.png
+#!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/%E4%B8%89%E5%BE%97%E5%88%A9.png?raw=true
 #!keyword=羊毛
 
 [Script]
