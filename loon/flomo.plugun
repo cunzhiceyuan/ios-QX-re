@@ -1,0 +1,11 @@
+#!name=flomo
+#!desc=作者要求不上传github
+#!tag = 功能解锁
+#!date = 2024-05-16 13:21:05
+#!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/flomo%E6%B5%AE%E5%A2%A8%E7%AC%94%E8%AE%B0%20-%20%E5%A4%87%E5%BF%98%E3%80%81%E4%BE%BF%E7%AD%BE%E3%80%81%E6%97%A5%E8%AE%B0-iOS-512x512.png?raw=true
+#!openUrl = https://apps.apple.com/app/id1552314395
+[Script]
+http-request ^https:\/\/flomoapp\.com\/api\/v1\/user\/me script-path=flomo.js, requires-body=true, timeout=60, tag=flomo
+
+[MITM]
+hostname = flomoapp.com
