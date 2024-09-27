@@ -5,7 +5,7 @@
 #!tag = 功能解锁
 #!date = 2024年9月27日16:37:07
 [Script]
-http-response ^https?:\/\/1jietu\.com\/apiv2\/(user|ad) script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/js/yjt.js, requires-body=true, timeout=60, tag=yjt
+http-response ^https?:\/\/1jietu\.com\/apiv2\/(user|ad) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/yjt.js, requires-body=true, timeout=60, tag=yjt
 
 [MITM]
 hostname = 1jietu.com
