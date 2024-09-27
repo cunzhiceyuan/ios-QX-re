@@ -1,0 +1,48 @@
+// 设置访问的 URL
+const query_addr = `https://witty-gratis-actor.glitch.me/`;
+
+// 构建请求头
+const myRequest = {
+  url: query_addr,
+  headers: {
+    'referer': 'https://witty-gratis-actor.glitch.me/',
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
+  }
+};
+
+// 发送请求并处理结果
+$task.fetch(myRequest).then(response => {
+  console.log(`访问慢速网站开始：${query_addr}`);
+  
+  // 响应体数据
+  const data = response.body;
+
+  // 判断是否加载成功（根据网站内容的标识符自行调整）
+  const reg_content = /<title>(.*)<\/title>/gm;
+  var titleMatch = reg_content.exec(data);
+  
+  if (titleMatch && titleMatch[1]) {
+    console.log(`网站标题解析成功: ${titleMatch[1]}`);
+    $notify("网站访问成功", "解析成功", `网站标题: ${titleMatch[1]}`);
+    $done({});
+  } else {
+    console.log(`解析失败, URL=${query_addr}`);
+    $notify("网站访问", "解析失败", "请检查网站内容或反馈给开发者");
+    $done({});
+  }
+  
+}, reason => {
+  console.log(`访问网站失败, URL=${query_addr}`);
+  $notify("网站访问", "请求失败", "请检查网络或反馈给开发者");
+  $done({});
+});
+
+// 设置cron表达式，Quantumult X中可以使用配置文件中的cron，Loon中类似。
+/*
+Quantumult X:
+  [task_local]
+  0 10 * * * script-path=your-script.js, timeout=70
+
+Loon:
+  cron "0 10 * * *" script-path=your-script.js, timeout=70
+*/
