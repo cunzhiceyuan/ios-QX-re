@@ -1,6 +1,7 @@
 #!name=Revenuecat
 #!desc=Revenuecat
 #!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1063.png
+#!tag = other
 
 [Rewrite]
 https://api.lianjiu.fun/app/api/v1/profile - reject
