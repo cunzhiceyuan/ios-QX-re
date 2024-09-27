@@ -1,6 +1,7 @@
 #!name=广汽丰田丰云行
 #!desc=去开屏广告
 #!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/%E4%B8%B0%E4%BA%91%E8%A1%8C-iOS-512x512.png?raw=true
+#!tag = 去广告
 
 [Rewrite]
 # 去开屏广告
