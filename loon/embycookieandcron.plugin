@@ -1,5 +1,5 @@
 #!name=Emby
-#!desc=emby cookie and cron
+#!desc=emby cookie and cron（获取cookie的脚步需要及时关闭！！！！！）
 #!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/Emby-iOS-512x512.png?raw=true
 #!tag = token and cron
 [Script]
