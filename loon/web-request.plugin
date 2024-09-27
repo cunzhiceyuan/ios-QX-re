@@ -1,7 +1,6 @@
 #!name=web的api调用
 #!desc=啊，这也要抄走？你用不到的！
-#!icon=https://img0.baidu.com/it/u=1159672393,2024255709&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1727542800&t=b445dd3f4f82d775109445d1bf596b8c
-
+#!icon=https://img1.baidu.com/it/u=3425772128,1185917767&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1727542800&t=59b9207ae03806a9ccbdb558a1215fbd
 
 [Script]
 cron "0 10 * * *" script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/web-request%2Cjs, timeout=70, tag=your-script
