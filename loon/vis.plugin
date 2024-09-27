@@ -1,0 +1,11 @@
+#!name=vis
+#!desc=vis
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1100.png
+
+[Script]
+http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/vis.js, requires-body=true, timeout=60, tag=vis
+
+http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/vis.js, timeout=60, tag=vis
+
+[MITM]
+hostname = api.revenuecat.com
