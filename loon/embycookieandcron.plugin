@@ -1,7 +1,7 @@
 #!name=Emby
 #!desc=emby cookie and cron
 #!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/Emby-iOS-512x512.png?raw=true
-
+#!tag = token and cron
 [Script]
 http-request ^https?:\/\/.+\/emby\/Sessions\/Playing\/Stopped script-path=https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Emby.js, requires-body=true, timeout=60, tag=Emby
 
