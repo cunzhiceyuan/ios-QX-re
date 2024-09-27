@@ -1,0 +1,9 @@
+#!name=端传媒
+#!desc=华文世界不可或缺的深度报道和多元声音（V3.2）
+#!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/%E7%AB%AF%E5%82%B3%E5%AA%92%20Initium%20Media-iOS-512x512.png?raw=true
+
+[Script]
+http-response ^https?:\/\/app\.theinitium\.com\/subs\/initiummedia_subs\/verify_subscription script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/dcm.js, requires-body=true, timeout=60, tag=dcm
+
+[MITM]
+hostname = app.theinitium.com
