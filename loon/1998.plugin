@@ -1,0 +1,16 @@
+#!name =1998
+#!desc = 1998解锁功能
+#!openUrl = https://apps.apple.com/app/id1513892479
+#!author = 
+#!tag = 功能破解
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(745)
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md
+#!icon = https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/1998%E8%AF%BE%E5%A0%82-%E5%85%AC%E5%8A%A1%E5%91%98%E8%80%83%E7%A0%94%E5%AD%A6%E4%B9%A0%E5%B9%B3%E5%8F%B0-iOS-512x512.png?raw=true
+#!date = 2024年9月27日
+[Script]
+http-response ^https:\/\/.*\.1998xuexi\.com\/source-gateway\/store-web-new\/app\/(course\/getCurrCatalogue\.action|material\/getMaterialCateLog\.action|vip\/getMemberVipInfo\.action|vip\/getVipInfomationAll\.action) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/1998.js, requires-body=true, timeout=60, tag=1998
+
+[MITM]
+hostname = *.1998xuexi.com
