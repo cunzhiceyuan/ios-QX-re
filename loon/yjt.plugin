@@ -1,7 +1,9 @@
 #!name=易截图
-#!desc=https://apps.apple.com/app/id6648791000
+#!desc=朋友圈点赞自制、聊天记录自制
+#!openUrl = https://apps.apple.com/app/id433125283
 #!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/%E6%98%93%E6%88%AA%E5%9B%BE-iOS-512x512.png?raw=true
 #!tag = 功能解锁
+#!date = 2024年9月27日16:37:07
 [Script]
 http-response ^https?:\/\/1jietu\.com\/apiv2\/(user|ad) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/yjt.js, requires-body=true, timeout=60, tag=yjt
 
