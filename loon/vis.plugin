@@ -1,7 +1,7 @@
 #!name=vis
 #!desc=支持版本：3.7.6 科学管理人生目标
 #!openUrl = https://apps.apple.com/app/id1572457968
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1100.png
+#!icon=https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/icon/Vis%20-%20OKR%20Goals%20Planner-iOS-512x512.png?raw=true
 #!tag = 功能解锁
 [Script]
 http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/vis.js, requires-body=true, timeout=60, tag=vis
