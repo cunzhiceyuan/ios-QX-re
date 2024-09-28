@@ -1,6 +1,6 @@
 #!name=周易起名
 #!desc=zyqmds
-#!icon=https://www.bing.com/images/blob?bcid=qOWIa.w7mY4Hh7oNhFz9KileL5sU.....3Y
+#!icon=https://www.helloimg.com/i/2024/09/28/66f75ee74ed2a.png
 #!openurl = https://apps.apple.com/cn/app/id955115658
 [Script]
 http-response ^https?:\/\/www\.zhouyilive\.com\/qm-api\/nm_user\.php script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/zyqmds.js, requires-body=true, timeout=60, tag=zyqmds
