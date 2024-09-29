@@ -1,0 +1,11 @@
+#!name=iTranscreen
+#!desc=iTranscreen- 屏幕翻译
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b8/1f/ad/b81fad91-85ed-4414-fa6f-d683dfb71cf9/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-85-220.png/350x350.png?
+#!openurl = https://apps.apple.com/cn/app/itranscreen-%E5%B1%8F%E5%B9%95%E7%BF%BB%E8%AF%91-%E6%B8%B8%E6%88%8F-%E6%BC%AB%E7%94%BB%E5%92%8C%E8%A7%86%E9%A2%91%E5%AE%9E%E6%97%B6%E7%BF%BB%E8%AF%91/id1663139919
+
+[Script]
+# >itranscreen-屏幕翻译
+http-response ^https?:\/\/.+.(itranscreen|tencentcs).+\/(settings|api\/v1\/user\/quota\?user_id).*$ script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/iTranscreen.js, requires-body=true, timeout=60, tag=iTranscreen
+
+[MITM]
+hostname = *.tencentcs.com, settings.itranscreen.com, api.itranscreen.com:8080
