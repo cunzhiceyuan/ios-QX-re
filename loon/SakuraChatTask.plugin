@@ -16,9 +16,9 @@ arg5 = input,"3 0 * * *",tag=中免会员小程序任务时间
 arg6 = switch,true,tag=中免会员小程序任务开关
 arg7 = input,"30 7 * * *",tag=亚朵酒店app任务时间
 arg8 = switch,true,tag=亚朵酒店app任务开关
-#arg9 = input,"3 0 * * *",tag=哈啰单车奖励金任务时间
-#arg10 = switch,true,tag=啰单车奖励金任务开关
-#arg11 = input,"15 0 * * *",tag=签知轩到任务时间
+arg9 = input,"3 0 * * *",tag=哈啰单车奖励金任务时间
+arg10 = switch,true,tag=啰单车奖励金任务开关
+arg11 = input,"15 0 * * *",tag=签知轩到任务时间
 #arg12 = switch,true,tag=知轩任务开关
 arg13 = input,"0 7,11,17 * * *",tag=阿里云盘任务时间
 arg14 = switch,true,tag=阿里云盘任务开关
@@ -70,8 +70,8 @@ cron {arg1} script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0
 cron {arg3} script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js,timeout=300, enable= {arg4}, tag=Sakura Checkbox
 cron {arg5} script-path=https://gist.githubusercontent.com/Sliverkiss/7f16bab92e312d1f0e520ca20d389924/raw/zmhy.js, timeout=300, enable= {arg6}, tag=中免会员小程序
 cron {arg7} script-path=https://gist.githubusercontent.com/Sliverkiss/2e2093bfd5f524d58c8e90fed9beacfd/raw/adjd.js, timeout=300, enable= {arg8},tag=亚朵酒店app
-#cron {arg9} script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/hldc.js, timeout=300, enable= {arg10},tag=哈啰单车奖励金签到
-#cron {arg11} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js, timeout=300, enable= {arg12}, tag=知轩
+cron {arg9} script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/hldc.js, timeout=300, enable= {arg10},tag=哈啰单车奖励金签到
+cron {arg11} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js, timeout=300, enable= {arg12}, tag=知轩
 cron {arg13} script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=300, enable= {arg14}, tag=阿里云盘签到
 cron {arg53} script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js,timeout=300, enable= {arg54}, tag=达美乐披萨
 cron {arg15} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/nestle.js, timeout=300, enable= {arg16}, tag=雀巢会员俱乐部
