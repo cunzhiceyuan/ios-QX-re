@@ -11,13 +11,13 @@ appName = input,"广汽丰田新能源",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 cron = input,"5 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
 cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
-cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
 
 
 [Script]
 http-response ^https:\/\/gw\.nevapp\.gtmc\.com\.cn\/ha\/iam\/api\/sec\/oauth\/token script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, requires-body=true, tag=广汽丰田_获取token,enable = {cookieScriptEnable}
 
-cron {cron} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, timeout=3600, tag=广汽丰田,enable = {cronScriptEnable}
+cron {cron} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, timeout=3600, tag=广汽丰田
 
 
 [MITM]

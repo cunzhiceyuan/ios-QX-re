@@ -1,6 +1,6 @@
 #!name=hzh
 #!desc=华住会
-#!icon = 
+#!icon = https://ows-cdn.huazhu.com/ows-official/pc/img/logo-word.png
 #!openUrl = 
 #!tag = 
 #!date = 2024-9-29
@@ -9,12 +9,11 @@ appName = input,"华住会",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 cron = input,"5 18 * * *",tag=定时任务时间,desc=定时任务的cron表达式
 cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
-cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
 
 [Script]
 http-request ^https?:\/\/hweb-personalcenter\.huazhu\.com\/login\/autoLogin$ script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/hzh.js, timeout=60, tag=hzh,enable = {cookieScriptEnable}
 
-cron {cron}  script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/hzh.js, timeout=120, tag=华住会,enable = {cronScriptEnable}
-
+cron {cron}  script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/hzh.js, timeout=120, tag=华住会
 [MITM]
 hostname = hweb-personalcenter.huazhu.com

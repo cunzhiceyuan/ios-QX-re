@@ -11,13 +11,13 @@ appName = input,"Loon",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 cron = input,"5 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
 cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
-cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
 
 
 [Script]
 http-request ^https:\/\/channel\.cheryfs\.cn\/archer\/activity-api\/common\/accountPointLeft script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Cheryfs/Cheryfs.js, requires-body=true, tag=好奇车生活_获取token,enable = {cookieScriptEnable}
 
-cron {cron} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Cheryfs/Cheryfs.js, timeout=3600, tag=好奇车生活.enable = {cronScriptEnable}
+cron {cron} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Cheryfs/Cheryfs.js, timeout=3600, tag=好奇车生活
 
 [MITM]
 hostname = channel.cheryfs.cn
