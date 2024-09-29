@@ -10,7 +10,7 @@
 appName = input,"QQ 任务工具",tag=app 的名字,desc=填写 app 的名称，默认为"QQ 任务工具"
 appCategory = select,"Music",tag=app 的分类,desc=选择 app 的分类，默认为"Music"
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择 app 是否支持中文，默认为支持
-cron = input,"35 8-13/1 * * *",tag=定时任务时间,desc=设置定时任务的 cron 表达式，默认为每天 8 点到 13 点，每小时的 35 分执行
+cron = input,"25 7-12/1 * * *",tag=定时任务时间,desc=设置定时任务的 cron 表达式，默认为每天 8 点到 13 点，每小时的 35 分执行
 cookieScriptEnable = switch,true,tag=是否启用获取 cookie 的脚本
 
 [Script]
