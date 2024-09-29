@@ -1,0 +1,3 @@
+const number = Math.floor(Math.random() * 10000);
+const yanluo = new Date()+"\n时不待我，吾辈当争分夺秒...";
+$notification.post("阎王签到","👻 签到成功 寿元减少"+number+"天",yanluo);
