@@ -4,8 +4,8 @@
 #!homePage = https://t.me/sliverkiss_blog
 #!data = 2024-09-21
 #!icon = https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/gril.png
-#!system = iOS,iPadOS
-#!loon_version = 3.2.3(753)
+#!system = 
+#!loon_version = 
 
 [Argument]
 arg1 = input,"17 10 * * *",tag=奶茶多合一任务时间
