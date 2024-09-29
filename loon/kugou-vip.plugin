@@ -1,8 +1,29 @@
-#!name=酷狗概念版自动领取VIP--Eric
-#!desc=每日凌晨0点10分自动领取VIP，第一使用打开酷狗概念版天天签到领VIP页面获取参数，提示获取成功即可，去除启动广告
-#!icon=https://img.kxdw.com/2024/0515/20240515111129257.png
-#openurl = https://apps.apple.com/cn/app/id1480205582
-#!keyword=酷狗概念版
+#!name = 酷狗概念版自动领取 VIP--Eric
+#!desc = 每日凌晨 0 点 10 分自动领取 VIP，第一使用打开酷狗概念版天天签到领 VIP 页面获取参数，提示获取成功即可，去除启动广告
+#!author = 未知
+#!homePage = https://apps.apple.com/cn/app/id1480205582
+#!data = 2024-09-29
+#!icon = https://img.kxdw.com/2024/0515/20240515111129257.png
+#!system = ios
+#!system_version = 未知
+#!loon_version = 未知
+#!tag = 功能解锁
+
+[Argument]
+appName = input,"酷狗概念版自动领取 VIP--Eric",tag=app 的名字,desc=填写 app 的用户名，用于提交 app 的相关信息
+appCategory = select,"Tool",tag=app 的分类
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择 app 是否支持中文
+cron = input,"10 0 * * *",tag=定时任务时间,desc=定时任务的 cron 表达式
+cookieScriptEnable = switch,true,tag=是否启用获取 cookie 的脚本
+
+[Script]
+cron "10 0 * * *" script-path=https://gist.githubusercontent.com/Alex0510/1c389019c264a7d3ddbe4dbcf77d4295/raw/kugou_auto.js, tag=酷狗领取 VIP,argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+
+http-request https://(gateway|gatewayretry|gateway3).kugou.com/youth/v1/(recharge/receive_vip_listen_song|activity/get_month_vip_record).* script-path=https://gist.githubusercontent.com/Alex0510/1c389019c264a7d3ddbe4dbcf77d4295/raw/kugou.js, tag=酷狗数据,argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable}
+
+[MITM]
+hostname = *.kugou.com
+
 
 [Rule]
 URL-REGEX,https://gateway.kugou.com/ads.gateway/.*,REJECT
@@ -24,10 +45,4 @@ DOMAIN-SUFFIX,mdt.qq.com,REJECT
 DOMAIN-SUFFIX,gdt.qq.com,REJECT
 DOMAIN-SUFFIX,e.qq.com,REJECT
 
-[Script]
-cron "10 0 * * *" script-path=https://gist.githubusercontent.com/Alex0510/1c389019c264a7d3ddbe4dbcf77d4295/raw/kugou_auto.js, tag=酷狗领取VIP
 
-http-request https://(gateway|gatewayretry|gateway3).kugou.com/youth/v1/(recharge/receive_vip_listen_song|activity/get_month_vip_record).* script-path=https://gist.githubusercontent.com/Alex0510/1c389019c264a7d3ddbe4dbcf77d4295/raw/kugou.js, tag=酷狗数据
-
-[MITM]
-hostname = *.kugou.com
