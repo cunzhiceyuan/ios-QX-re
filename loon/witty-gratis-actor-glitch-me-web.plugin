@@ -1,5 +1,5 @@
 #!name=witty-gratis-actor-glitch-me-web-api调用
-#!desc=每5个小时执行一次任务，一天会执行5次（0 点、5 点、10 点、15 点、20点）
+#!desc=0 */5 * * *   = 每5个小时执行一次任务，一天会执行5次（0 点、5 点、10 点、15 点、20点）
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ae/09/e1/ae09e1ae-9169-b46e-1267-7b7a7c733b3c/AppIcon-0-1x_U007epad-0-0-0-0-0-0-0-85-220-0.png/246x0w.webp
 #!openUrl = https://witty-gratis-actor.glitch.me
 
