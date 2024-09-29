@@ -1,0 +1,17 @@
+#!name=今日汽油
+#!desc=在每日的8点30分通知，打开:loon-右上角三点-通知-允许通知+脚本通知
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png
+#!openUrl = 
+#!tag = token and cron
+#!date = 2024-9-29
+
+
+
+[Argument]
+appName = input,"酷狗概念版自动领取 VIP--Eric",tag=app 的名字,desc=填写 app 的用户名，用于提交 app 的相关信息
+appCategory = select,"Tool",tag=app 的分类
+cron = input,"30 8 * * *",tag=定时任务时间,desc=定时任务的 cron 表达式
+Enable = switch,true,tag=是否启用
+
+[Script]
+cron {cron} script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/js/oil.js, timeout=120, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png,enable = {Enable}
