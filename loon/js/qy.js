@@ -2,10 +2,10 @@
 *@file       QQ音乐
 *@desp       本脚本仅适用于QQ音乐部分积分任务，仅测试Quantumult X、青龙
 *@env        qqMusicLogLevel, qqMusicCookie
-*@author     WowYiJiu
+*@author     作者已经删除了！
 *@updated    2024-5-2
 *@version    v1.0.2
-*@link       https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js
+*@link      
 ❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖❖
 详细功能：
 🔵 每日签到
