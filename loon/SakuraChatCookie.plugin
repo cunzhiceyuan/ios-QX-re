@@ -1,0 +1,69 @@
+#!name = SakuraChatCookie
+#!desc = 🌸Sakura Scripts 获取cookie/token
+#!author = Sliverkiss [https://github.com/Sliverkiss]
+#!homePage = https://t.me/sliverkiss_blog
+#!data = 2024-09-21
+#!icon = https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/gril.png
+#!system = iOS,iPadOS
+#!loon_version = 3.2.3(753)
+
+[Argument]
+arg1 = switch,true,tag=奶茶多合一获取
+arg2 = switch,true,tag=Sakura Checkbox获取token
+arg3 = switch,true,tag=中免会员小程序获取token
+arg4 = switch,true,tag=亚朵酒店app获取token
+#arg5 = switch,true,tag=哈啰单车获取token
+#arg6 = switch,true,tag=知轩获取token
+arg7 = switch,true,tag=阿里云盘获取cookie
+arg24 = switch,true,tag=达美乐披萨获取token
+arg8 = switch,true,tag=雀巢会员俱乐部获取token
+arg9 = switch,true,tag=夸克网盘获取token
+arg10 = switch,true,tag=美的会员获取token
+arg11 = switch,true,tag=比格披萨自助获取token
+arg12 = switch,true,tag=蜜雪冰城获取token
+arg13 = switch,true,tag=猫耳cookie
+arg14 = switch,true,tag=IQOO社区获取token
+arg15 = switch,true,tag=晓晓优选获取
+arg16 = switch,true,tag=胖乖生活获取
+arg17 = switch,true,tag=杰士邦安心福利社获取token
+arg18 = switch,true,tag=奈雪点单获取token
+arg19 = switch,true,tag=康佰家大药房获取token
+arg20 = switch,true,tag=希望云社区获取token
+arg21 = switch,true,tag=泡泡玛特获取token
+arg22 = switch,true,tag=联想赚金豆获取token
+arg23 = switch,true,tag=小蚕霸王餐获取
+arg25 = switch,true,tag=southplus获取token
+
+[Script]
+http-response ^https:\/\/(webapi|webapi2)\.qmai\.cn\/web\/seller\/(oauth\/flash-sale-login|account\/login-minp) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enable = {arg1}, tag=奶茶获取token
+http-request ^https:\/\/(webapi|webapi2|qmwebapi)\.qmai\.cn\/web\/(catering\/integral|cmk-center)\/sign\/(signIn|takePartInSign) script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, requires-body=true, timeout=60, enable = {arg1}, tag=奶茶获取token
+http-response https://h5.youzan.com/wscump/checkin/get_activity_by_yzuid_v2.json.+ script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js, timeout=300, enable = {arg2}, tag=Sakura Checkbox获取token
+http-request ^https:\/\/cdfmbrapi.cdfg.com.cn\/api\/points\/paymentList script-path=https://gist.githubusercontent.com/Sliverkiss/7f16bab92e312d1f0e520ca20d389924/raw/zmhy.js, timeout=10, enable = {arg3}, tag=中免会员小程序获取token
+http-request ^https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+ script-path=https://gist.githubusercontent.com/Sliverkiss/2e2093bfd5f524d58c8e90fed9beacfd/raw/adjd.js, timeout=10, enable = {arg4}, tag=亚朵酒店app获取token
+#http-request ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/hldc.js, timeout=10, enable = {arg5}, tag=哈啰单车获取token
+#http-request ^https:\/\/zxcstxt\.com\/user\/ script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js, timeout=10, enable = {arg6}, tag=知轩获取token
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, enable = {arg7}, timeout=60, tag=阿里云盘获取cookie
+http-request ^https:\/\/game\.dominos\.com\.cn\/.+\/game\/gameDone script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js, requires-body=true, timeout=10, enable = {arg24}, tag=达美乐披萨获取token
+http-request ^https:\/\/crm.nestlechinese.com\/openapi\/pointsservice\/api\/Points\/getuserbalance script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/nestle.js, timeout=10, enable = {arg8}, tag=雀巢会员俱乐部获取token
+http-response ^https:\/\/drive-pc\.quark\.cn\/1\/clouddrive\/file\/sort script-path=https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js, requires-body=true, timeout=60, enable = {arg9}, tag=夸克网盘获取token
+http-response ^https:\/\/coral2\.quark\.cn\/task\/trigger script-path=https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js, requires-body=true, timeout=60, enable = {arg9}, tag=夸克网盘福利日常收录任务
+http-request ^https:\/\/coral2\.quark\.cn\/quark\/(carbon|welfare)\/(v1|v2)\/signIn script-path=https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js, requires-body=true, timeout=60, enable = {arg9}, tag=夸克网盘空间签到收录任务
+http-request ^https:\/\/coral2\.quark\.cn\/quark\/welfare\/v2\/sleep\/trigger script-path=https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js, requires-body=true, timeout=60, enable = {arg9}, tag=夸克网盘睡眠打卡收录任务
+http-request ^https:\/\/mvip.midea.cn\/next\/mucuserinfo\/getmucuserinfo script-path=https://gist.githubusercontent.com/Sliverkiss/3c0239a09cbe381c572a826a5caf5621/raw/midea.js, timeout=10, enable = {arg10}, tag=美的会员获取token
+http-request ^https:\/\/m\.hualala\.com\/orh5\/promotionEvent\/getSignInEventDetail.+ script-path=https://gist.githubusercontent.com/Sliverkiss/4703f7114ad352e97dcd5eaa4dc3e2f5/raw/bgps.js, timeout=10, enable = {arg11}, tag=比格披萨自助获取token
+http-response ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/customer\/info script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, requires-body=true, timeout=60,  enable = {arg12}, tag=蜜雪冰城获取token
+http-response ^https:\/\/www\.missevan\.com\/account\/userinfo script-path=https://gist.githubusercontent.com/Sliverkiss/79fd3bc95310d10bccc45efdab0204fc/raw/missevan.js, requires-body=true, timeout=60, enable = {arg13}, tag=猫耳FM
+http-response ^https:\/\/bbs-api\.iqoo\.com\/api\/v3\/user\?userId= script-path=https://gist.githubusercontent.com/Sliverkiss/bfc5527ad3ea8ac7b0820ca442442452/raw/iqoo.js, requires-body=true, timeout=60, enable = {arg14}, tag=IQOO社区获取token
+http-response ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/my script-path=https://gist.githubusercontent.com/Sliverkiss/991a81be1fc8cf2a1937432be68f5521/raw/xxyx.js, requires-body=true, timeout=60, enable = {arg15}, tag=晓晓优选
+http-request ^https:\/\/userapi\.qiekj\.com\/wechat\/unionId\/login script-path=https://gist.githubusercontent.com/Sliverkiss/845cf469e4762afdc83c3949be006609/raw/pgsh.js, requires-body=true, timeout=60, enable = {arg16}, tag=胖乖生活
+http-response ^https:\/\/xh-vip-api\.a-touchin\.com\/mp\/user\/info script-path=https://gist.githubusercontent.com/Sliverkiss/6d15658e313eee254a55d2b97933587c/raw/jsb.js, requires-body=true, timeout=60, enable = {arg17}, tag=杰士邦安心福利社获取token
+http-request ^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, requires-body=true, timeout=60, enable = {arg18}, tag=奈雪点单获取token
+http-request ^https:\/\/app.fjxzj.com\/wxscrm\/api\/member.php\?api=myintegralall script-path=https://gist.githubusercontent.com/Sliverkiss/48154e5277d87f9810d6b13b2b98f12a/raw/kbj.js, timeout=10, enable = {arg19}, tag=康佰家大药房获取token
+http-request ^https:\/\/xwyapi.newhope.cn\/customer\/score\/detailUser\?customerId=.+ script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/xwy.js, timeout=10, enable = {arg20}, tag=希望云社区获取token
+http-response ^https:\/\/popvip\.paquapp\.com\/miniapp\/v2\/wechat\/getUserInfo script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js, requires-body=true, timeout=60, enable = {arg21}, tag=泡泡玛特获取token
+http-response ^https:\/\/mmembership\.lenovo\.com\.cn\/member-hp-webapi\/v1\/user\/getUserProfileInformation script-path=https://gist.githubusercontent.com/Sliverkiss/b9eaf7c8d98df06087851c3e1d5040cf/raw/lenovo.js, requires-body=true, timeout=60, enable = {arg22}, tag=联想赚金豆获取token
+http-response ^https:\/\/gw\.xiaocantech\.com\/rpc script-path=https://gist.githubusercontent.com/Sliverkiss/250a02315f0a2c99f42da3b3573375c8/raw/xcbwc.js, requires-body=true, timeout=60, enable = {arg23}, tag=小蚕霸王餐
+http-response ^https:\/\/www\.south-plus\.net\/plugin\.php\?H_name-tasks\.html script-path=https://gist.githubusercontent.com/Sliverkiss/94ae2449c07f78e6ea44277c831a58c0/raw/southPlus.js, requires-body=true, timeout=30, enable = {arg25}, tag=south-plus
+
+[MITM]
+hostname = webapi2.qmai.cn,webapi.qmai.cn,qmwebapi.qmai.cn,h5.youzan.com,cdfmbrapi.cdfg.com.cn,miniapp.yaduo.com,api.hellobike.com,zxcstxt.com,auth.alipan.com,auth.aliyundrive.com,crm.nestlechinese.com,coral2.quark.cn,drive-pc.quark.cn,mvip.midea.cn,m.hualala.com,mxsa.mxbc.net,www.missevan.com,bbs-api.iqoo.com,xxyx-client-api.xiaoxiaoyouxuan.com,userapi.qiekj.com,xh-vip-api.a-touchin.com,tm-web.pin-dao.cn,app.fjxzj.com,xwyapi.newhope.cn,popvip.paquapp.com,mmembership.lenovo.com.cn,gw.xiaocantech.com,game.dominos.com.cn,www.south-plus.net

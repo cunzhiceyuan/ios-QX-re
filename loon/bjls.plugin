@@ -1,0 +1,12 @@
+#!name=边界猎手
+#!desc=调研选址最佳商业决策助手
+#!openUrl = https://apps.apple.com/cn/app/%E8%BE%B9%E7%95%8C%E7%8C%8E%E6%89%8B/id1641843287
+#!tag = 功能解锁
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7d/0b/ef/7d0befe3-898d-a2e4-fdba-9fd40f6769f5/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/350x350.png?
+#!date = 2024-9-29
+
+[Script]
+http-response ^https?:\/\/api-sub\.meitu\.com\/v2\/user\/(login_vip_check|vip_info|info_by_entrance).*json script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/KP.js, requires-body=true, timeout=60, tag=KP
+
+[MITM]
+hostname = api-sub.meitu.com

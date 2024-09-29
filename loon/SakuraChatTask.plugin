@@ -1,0 +1,97 @@
+#!name = SakuraChatTask
+#!desc = 🌸Sakura Scripts 定时任务
+#!author = Sliverkiss [https://github.com/Sliverkiss]
+#!homePage = https://t.me/sliverkiss_blog
+#!data = 2024-09-21
+#!icon = https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/gril.png
+#!system = iOS,iPadOS
+#!loon_version = 3.2.3(753)
+
+[Argument]
+arg1 = input,"17 10 * * *",tag=奶茶多合一任务时间
+arg2 = switch,true,tag=奶茶多合一任务开关
+arg3 = input,"30 8 * * *",tag=Sakura Checkbox任务时间
+arg4 = switch,true,tag=Sakura Checkbox任务开关
+arg5 = input,"3 0 * * *",tag=中免会员小程序任务时间
+arg6 = switch,true,tag=中免会员小程序任务开关
+arg7 = input,"30 7 * * *",tag=亚朵酒店app任务时间
+arg8 = switch,true,tag=亚朵酒店app任务开关
+#arg9 = input,"3 0 * * *",tag=哈啰单车奖励金任务时间
+#arg10 = switch,true,tag=啰单车奖励金任务开关
+#arg11 = input,"15 0 * * *",tag=签知轩到任务时间
+#arg12 = switch,true,tag=知轩任务开关
+arg13 = input,"0 7,11,17 * * *",tag=阿里云盘任务时间
+arg14 = switch,true,tag=阿里云盘任务开关
+arg53 = input,"30 10 * * *",tag=达美乐任务时间
+arg54 = switch,true,tag=达美乐任务开关
+arg15 = input,"30 0 * * *",tag=雀巢会员俱乐部任务时间
+arg16 = switch,true,tag=雀巢会员俱乐部任务开关
+arg17 = input,"0 8,18 * * *",tag=夸克网盘任务时间
+arg18 = switch,true,tag=夸克网盘任务开关
+arg19 = input,"8 8 * * *",tag=轻之文库任务时间
+arg20 = switch,true,tag=轻之文库任务开关
+arg21 = input,"8 8 * * *",tag=动漫之家任务时间
+arg22 = switch,true,tag=动漫之家任务开关
+arg23 = input,"9 9 * * *",tag=美的会员任务时间
+arg24 = switch,true,tag=美的会员任务开关
+arg25 = input,"18 8 8 * * *",tag=比格披萨自助任务时间
+arg26 = switch,true,tag=比格披萨自助任务开关
+arg27 = input,"21 9 * * *",tag=蜜雪冰城任务时间
+arg28 = switch,true,tag=蜜雪冰城任务开关
+arg29 = input,"10,20,30 9 * * *",tag=猫耳FM任务时间
+arg30 = switch,true,tag=猫耳FM任务开关
+arg31 = input,"10 9 * * *",tag=IQOO社区任务时间
+arg32 = switch,true,tag=IQOO社区任务开关
+arg33 = input,"10 8 * * *",tag=晓晓优选任务时间
+arg34 = switch,true,tag=晓晓优选任务开关
+arg35 = input,"10 8 * * *",tag=胖乖生活任务时间
+arg36 = switch,true,tag=胖乖生活任务开关
+arg37 = input,"10 10 * * *",tag=杰士邦任务时间
+arg38 = switch,true,tag=杰士邦任务开关
+arg39 = input,"12 9 * * *",tag=海底捞任务时间
+arg40 = switch,true,tag=海底捞任务开关
+arg41 = input,"1 9 * * *",tag=奈雪任务时间
+arg42 = switch,true,tag=奈雪任务开关
+arg43 = input,"22 30 6 * * *",tag=康佰家大药房任务时间
+arg44 = switch,true,tag=康佰家大药房任务开关
+arg45 = input,"0 20 * * *",tag=希望云社区任务时间
+arg46 = switch,true,tag=希望云社区任务开关
+arg47 = input,"0 9 * * *",tag=希泡泡玛特任务时间
+arg48 = switch,true,tag=泡泡玛特任务开关
+arg49 = input,"5 9 * * *",tag=联想赚金豆任务时间
+arg50 = switch,true,tag=联想赚金豆任务开关
+arg51 = input,"9 9 * * *",tag=小蚕霸王餐任务时间
+arg52 = switch,true,tag=小蚕霸王餐任务开关
+arg55= input,"43 7 * * *",tag=south-plus任务时间
+arg56= switch,false,tag=south-plus任务开关
+
+[Script]
+cron {arg1} script-path=https://gist.githubusercontent.com/Sliverkiss/8b4f5487e0f28786c7dec9c7484dcd5e/raw/teaMilk.js, enable= {arg2}, tag=奶茶多合一
+cron {arg3} script-path=https://gist.githubusercontent.com/Sliverkiss/585daf69a0a6c7243db8993f5394a124/raw/youzan.js,timeout=300, enable= {arg4}, tag=Sakura Checkbox
+cron {arg5} script-path=https://gist.githubusercontent.com/Sliverkiss/7f16bab92e312d1f0e520ca20d389924/raw/zmhy.js, timeout=300, enable= {arg6}, tag=中免会员小程序
+cron {arg7} script-path=https://gist.githubusercontent.com/Sliverkiss/2e2093bfd5f524d58c8e90fed9beacfd/raw/adjd.js, timeout=300, enable= {arg8},tag=亚朵酒店app
+#cron {arg9} script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/hldc.js, timeout=300, enable= {arg10},tag=哈啰单车奖励金签到
+#cron {arg11} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/zhixuan.js, timeout=300, enable= {arg12}, tag=知轩
+cron {arg13} script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=300, enable= {arg14}, tag=阿里云盘签到
+cron {arg53} script-path=https://gist.githubusercontent.com/Sliverkiss/6b4da0d367d13790a9fd1d928c82bdf8/raw/dlm.js,timeout=300, enable= {arg54}, tag=达美乐披萨
+cron {arg15} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/nestle.js, timeout=300, enable= {arg16}, tag=雀巢会员俱乐部
+cron {arg17} script-path=https://gist.githubusercontent.com/Sliverkiss/1589f69e675019b0b685a57a89de9ea5/raw/quarkV2.js, timeout=300, enable= {arg18}, tag=夸克网盘
+cron {arg19} script-path=https://gist.githubusercontent.com/Sliverkiss/a56aaa31bbc01191590b9c4c5c698751/raw/linovel.js, timeout=300, enable= {arg20}, tag=轻之文库
+cron {arg21} script-path=https://gist.githubusercontent.com/Sliverkiss/50a2046b37e01bb8f10ab0420d6f2a91/raw/dmzj.js, timeout=300, enable= {arg22}, tag=动漫之家
+cron {arg23} script-path=https://gist.githubusercontent.com/Sliverkiss/3c0239a09cbe381c572a826a5caf5621/raw/midea.js, timeout=300, enable= {arg24}, tag=美的会员
+cron {arg25} script-path=https://gist.githubusercontent.com/Sliverkiss/4703f7114ad352e97dcd5eaa4dc3e2f5/raw/bgps.js, timeout=300, enable= {arg26}, tag=比格披萨自助
+cron {arg27} script-path=https://gist.githubusercontent.com/Sliverkiss/865c82e42a5730bb696f6700ebb94cee/raw/mxbc.js, timeout=300, enable={arg28}, tag=蜜雪冰城
+cron {arg29} script-path=https://gist.githubusercontent.com/Sliverkiss/79fd3bc95310d10bccc45efdab0204fc/raw/missevan.js, timeout=300, enable={arg30}, tag=猫耳FM
+cron {arg31} script-path=https://gist.githubusercontent.com/Sliverkiss/bfc5527ad3ea8ac7b0820ca442442452/raw/iqoo.js, timeout=300, enable={arg32}, tag=IQOO社区任务
+cron {arg33} script-path=https://gist.githubusercontent.com/Sliverkiss/991a81be1fc8cf2a1937432be68f5521/raw/xxyx.js, timeout=300, enable={arg34}, tag=晓晓优选
+cron {arg35} script-path=https://gist.githubusercontent.com/Sliverkiss/845cf469e4762afdc83c3949be006609/raw/pgsh.js, timeout=300, enable={arg36}, tag=胖乖生活
+cron {arg37} script-path=https://gist.githubusercontent.com/Sliverkiss/6d15658e313eee254a55d2b97933587c/raw/jsb.js, timeout=300, enable={arg38}, tag=杰士邦安心福利社
+cron {arg39} script-path=https://gist.githubusercontent.com/Sliverkiss/354e7994f9ee5cc9cc353b6aba320052/raw/hdl.js, timeout=300, enable={arg40}, tag=海底捞
+cron {arg41} script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, timeout=300, enable={arg42}, tag=奈雪点单签到
+cron {arg43} script-path=https://gist.githubusercontent.com/Sliverkiss/48154e5277d87f9810d6b13b2b98f12a/raw/kbj.js, timeout=300, enable={arg44}, tag=康佰家大药房
+cron {arg45} script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/xwy.js, timeout=300, enable={arg46}, tag=希望云社区
+cron {arg47} script-path=https://gist.githubusercontent.com/Sliverkiss/3e1fe82fa18dbcff9b2ae7fdad7596a6/raw/ppmt.js, timeout=300, enable={arg48}, tag=泡泡玛特签到
+cron {arg49} script-path=https://gist.githubusercontent.com/Sliverkiss/b9eaf7c8d98df06087851c3e1d5040cf/raw/lenovo.js, timeout=300, enable={arg50}, tag=联想赚金豆
+cron {arg51} script-path=https://gist.githubusercontent.com/Sliverkiss/250a02315f0a2c99f42da3b3573375c8/raw/xcbwc.js, timeout=300, enable={arg52}, tag=小蚕霸王餐
+cron {arg55} script-path=https://gist.githubusercontent.com/Sliverkiss/94ae2449c07f78e6ea44277c831a58c0/raw/southPlus.js, timeout=300, enable={arg56}, tag=south-plus签到
+[MITM]

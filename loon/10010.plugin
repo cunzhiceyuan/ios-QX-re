@@ -1,0 +1,15 @@
+#!name=100010qd
+#!desc=100010签到等token获取
+#!icon=https://www.xdsucai.cn/wp-content/uploads/2021/02/1612335567-91a76a87a3e9343.png
+
+
+
+[Script]
+http-request ^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/100010/10010.cookie.js, timeout=60, tag=10010.cookie
+
+http-request ^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/100010/10010.cookie.js, timeout=60, tag=10010.cookie
+
+http-request ^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/100010/10010.cookie.js, timeout=60, tag=10010.cookie
+
+[MITM]
+hostname = act.10010.com, m.client.10010.com

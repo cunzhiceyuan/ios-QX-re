@@ -1,0 +1,11 @@
+#!name=MiiDii
+#!desc=谜底时钟年会员，解锁成功理论上有消息弹窗，成功后即可关闭脚本。（解锁脚本不可共存）
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7d/7e/94/7d7e944f-79df-9627-9e78-589ae6f54bb7/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220-0.png/350x350.png?
+#!tag = 功能解锁
+#!date = 2024-9-29
+#!openUrl = https://apps.apple.com/cn/app/%E8%B0%9C%E5%BA%95%E6%97%B6%E9%92%9F/id1536358464
+[Script]
+http-response https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/md.js, requires-body=true, timeout=60, tag=md
+
+[MITM]
+hostname = api.revenuecat.com

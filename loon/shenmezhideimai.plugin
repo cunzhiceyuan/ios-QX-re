@@ -1,0 +1,16 @@
+#!name=smzdm
+#!desc=什么值得买
+#!icon=https://pp.myapp.com/ma_icon/0/icon_188690_1727424764/256
+#!openUrl = https://apps.apple.com/cn/app/%E4%BB%80%E4%B9%88%E5%80%BC%E5%BE%97%E4%B9%B0/id518213356
+
+[Script]
+# 获取什么值得买任务需要的各项参数
+http-request ^https?:\/\/user-api\.smzdm\.com\/checkin$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js, timeout=60, tag=smzdm_daily
+
+cron "10 17 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js, tag=什么值得买签到
+
+
+
+
+[MITM]
+hostname = user-api.smzdm.com

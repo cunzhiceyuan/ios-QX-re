@@ -1,0 +1,27 @@
+#!name=去除 keep 广告
+#!desc=可能需要重新安装Keep
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3f/d7/33/3fd7337c-fbe3-0f92-02ec-93760a1be469/AppIcon-0-0-1x_U007epad-0-0-85-220.png/350x350.png?
+#!openUrl = https://apps.apple.com/cn/app/keep-%E8%B7%91%E6%AD%A5%E5%81%A5%E8%BA%AB%E9%AA%91%E8%A1%8C%E7%91%9C%E4%BC%BD-%E4%B8%80%E9%94%AE%E5%BC%80%E5%8A%A8/id952694580
+[Rule]
+DOMAIN,httpdns.calorietech.com,REJECT
+
+[Rewrite]
+^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/v1\/ad - reject
+^https:\/\/api\.gotokeep\.com\/anno\/v1\/upgrade\/check$ - reject
+^https?:\/\/api.gotokeep.com/cauchy/growth/init - reject
+^https:\/\/api\.gotokeep\.com\/training\/box\/config - reject
+^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/tool\/v1\/jump\/popup$ - reject
+# 动态相册
+^https:\/\/api\.gotokeep\.com\/athena\/v1\/people\/my\/entry - reject
+
+[Script]
+http-response https:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/my.js, requires-body=true, tag=K-My
+
+http-response https:\/\/api\.gotokeep\.com\/config\/v3/basic script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/basic.js, requires-body=true, tag=K-Basic
+
+http-response https:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v1\/ad script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/kad.js, requires-body=true, tag=K-Ad
+
+http-response ^https?:\/\/api\.gotokeep\.com\/athena\/v7\/people\/course\/(practiced|general) script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/course.js, requires-body=true, tag=K-Course
+
+[MITM]
+hostname = api.gotokeep.com, kad.gotokeep.com
