@@ -14,7 +14,6 @@
 appName = input,"100010qd 插件",tag=app 的名字,desc=填写 app 的用户名，用于提交 app 的相关信息
 appCategory = select,"Tool",tag=app 的分类
 isSupportChinese = switch,true,tag=是否支持中文,desc=选择 app 是否支持中文
-cron = input,"",tag=定时任务时间,desc=定时任务的 cron 表达式
 cookieScriptEnable = switch,true,tag=是否启用获取 cookie 的脚本
 
 [Script]
