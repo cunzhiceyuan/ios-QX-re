@@ -1,0 +1,9 @@
+#!name=爱企查vip
+#!desc=可能失效
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d2/11/17/d21117b7-7d36-b17e-dadb-9cdc98edee21/AppIcon-0-0-1x_U007ephone-0-0-0-85-220.png/350x350.png?
+#!openUrl = https://apps.apple.com/us/app/id1527039353
+#!tag = 功能解锁
+#!date = 2024-9-29
+
+[Script]
+http-response ^https:\//aiqicha.baidu.com\/usercenter\/getvipinfoajax script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/aiqicha.js, requires-body=true, timeout=60, tag=aiqicha

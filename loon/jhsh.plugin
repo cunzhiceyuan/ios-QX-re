@@ -1,0 +1,25 @@
+#!name=建行生活
+#!desc=活动入口：建行生活APP -> 首页 -> 会员有礼 -> 签到
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5c/b0/fe/5cb0fe85-447f-ffc6-8b0e-24b68772b745/AppIcon-0-1x_U007emarketing-0-7-0-0-sRGB-85-220-0.png/350x350.png
+#!openUrl = https://apps.apple.com/ru/app/%E5%BB%BA%E8%A1%8C%E7%94%9F%E6%B4%BB/id1472477795
+#!tag = token and cron
+#!date = 2024-9-29
+
+
+
+[Argument]
+appName = input,"建行生活",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"17 7 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+
+[Script]
+# 获取建行生活签到需要的各项参数
+http-request ^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin) script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, requires-body=true, timeout=60, tag=jhsh_checkIn,enable = {cookieScriptEnable}
+
+
+cron {cron} script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js,tag = 建行生活,enable = {cronScriptEnable}
+[MITM]
+hostname = yunbusiness.ccb.com

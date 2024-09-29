@@ -1,0 +1,14 @@
+#!name=PicsewProCrack
+#!desc=PicsewProCrack  V3.9.4 更新时间：2022-10-14
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/2e/ac/dd2eac37-a124-4155-5e80-10675ce95e7c/AppIcon-0-0-1x_U007epad-0-1-0-85-220.jpeg/350x350.png?
+#!openUrl = https://apps.apple.com/us/id1208145167
+#!tag = 功能解锁
+#!date = 2024-9-29
+[Argument]
+ScriptEnable = switch,true,tag=是否启用脚本
+[Script]
+# > Picsew解锁专业版
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js, requires-body=true, timeout=60, tag=PicsewProCrack,enable = {ScriptEnable}
+
+[MITM]
+hostname = buy.itunes.apple.com

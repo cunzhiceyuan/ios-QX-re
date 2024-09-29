@@ -1,0 +1,22 @@
+#!name=慢慢买
+#!desc=meituan
+#!icon=https://pp.myapp.com/ma_icon/0/icon_11385461_1727400148/256
+#!openUrl = https://apps.apple.com/ru/app/id933106331
+#!tag = token and cron
+#!date = 2024-9-29
+
+[Argument]
+appName = input,"慢慢买",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"6 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+[Script]
+# 使用方法2：美团APP -> 首页 -> 红包签到 -> 手动签到一次
+http-request ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js, requires-body=true, timeout=60, tag=meituan.cookie,enable = {cookieScriptEnable}
+
+cron {cron} script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,tag = 慢慢买,argument=[{appName}],enable = {cronScriptEnable}
+
+[MITM]
+hostname = i.meituan.com

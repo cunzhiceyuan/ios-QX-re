@@ -1,0 +1,23 @@
+#!name=iqooc
+#!desc=iqoo社区
+#!icon=https://raw.githubusercontent.com/czy13724/LeviIcons/main/leviicons/iqooc.png
+#!openUrl = 
+#!tag = token and cron
+#!date = 2024-9-29
+
+[Argument]
+appName = input,"iQOO社区",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"5 13 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+[Script]
+# 获取IQOO社区需要的各项参数
+http-response ^https:\/\/bbs-api\.iqoo\.com\/api\/v3\/user\?userId= script-path=https://gist.githubusercontent.com/Sliverkiss/bfc5527ad3ea8ac7b0820ca442442452/raw/iqoo.js, requires-body=true, timeout=60, tag=iqoo,enable = {cookieScriptEnable}
+
+
+cron {cron} script-path=https://gist.githubusercontent.com/Sliverkiss/bfc5527ad3ea8ac7b0820ca442442452/raw/iqoo.js, tag=IQOO社区签到, img-url=https://raw.githubusercontent.com/czy13724/LeviIcons/main/leviicons/iqooc.png, enable = {cronScriptEnable}
+
+[MITM]
+hostname = bbs-api.iqoo.com

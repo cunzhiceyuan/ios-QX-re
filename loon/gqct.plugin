@@ -1,0 +1,24 @@
+#!name=广汽丰田新能源
+#!desc=广汽丰田新能源
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/6c/9e/996c9e2f-f884-7f5f-0b0c-b3e4a87faa00/AppIcon-0-0-1x_U007emarketing-0-5-0-0-85-220.png/350x350.png?
+#!keyword=羊毛
+#!openUrl = https://apps.apple.com/us/app/%E4%B8%B0%E4%BA%91%E8%A1%8C/id1033830895
+#!tag = token and cron
+#!date = 2024-9-29
+
+[Argument]
+appName = input,"广汽丰田新能源",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"5 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+
+[Script]
+http-response ^https:\/\/gw\.nevapp\.gtmc\.com\.cn\/ha\/iam\/api\/sec\/oauth\/token script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, requires-body=true, tag=广汽丰田_获取token,enable = {cookieScriptEnable}
+
+cron "33 6,16,23 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/GQFT/GQFT.js, timeout=3600, tag=广汽丰田,enable = {cronScriptEnable}
+
+
+[MITM]
+hostname = gw.nevapp.gtmc.com.cn

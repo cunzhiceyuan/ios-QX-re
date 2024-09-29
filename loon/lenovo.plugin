@@ -1,0 +1,21 @@
+#!name=lenovo
+ #!desc=联想app
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ab/82/82/ab82825b-cbd2-db23-b586-26518fa49689/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/350x350.png?
+#!openUrl = https://apps.apple.com/us/app/%E8%81%94%E6%83%B3/id1080533388
+#!tag = token and cron
+#!date = 2024-9-29
+
+[Argument]
+appName = input,"联想",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"5 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+  [Script]
+ http-response ^https:\/\/mmembership\.lenovo\.com\.cn\/member-hp-webapi\/v1\/user\/getUserProfileInformation script-path=https://gist.githubusercontent.com/Sliverkiss/b9eaf7c8d98df06087851c3e1d5040cf/raw/lenovo.js, requires-body=true, timeout=60, tag=联想赚金豆获取token,enable = {cookieScriptEnable}
+
+cron {cron} script-path=https://gist.githubusercontent.com/Sliverkiss/b9eaf7c8d98df06087851c3e1d5040cf/raw/lenovo.js，tag = 联想获取金豆,argument=[{appName}],enable = {cronScriptEnable}
+
+  [MITM]
+ hostname = mmembership.lenovo.com.cn
