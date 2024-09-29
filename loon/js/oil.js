@@ -5,7 +5,7 @@
  * 更新：2023-06-08 20:30
  * 使用：搭配BoxJS随时更改地区 https://raw.githubusercontent.com/fmz200/wool_scripts/main/boxjs/fmz200.boxjs.json
  * [task_local]
- * 0 8 * * * https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/oil_price.js, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png, enabled=true
+ * 0 8 * * * https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/js/oil.js, tag=今日油价, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/oil.png, enabled=true
  */
 
 // 获取存储的地区设置，默认为浙江
