@@ -7,7 +7,7 @@
 #!system = 
 #!system_version =
 #!loon_version = 
-#!tag = cron
+#!tag = token and cron
 
 [Argument]
 appName = input,"七彩虹商城插件",tag=app 的名字,desc=填写 app 的用户名，用于提交 app 的相关信息
