@@ -169,7 +169,7 @@ if ((isGetCookie = typeof $request !== `undefined`)) {
 					$.info(`尊贵的绿钻会员${nickname}`);
 				}
 			} else {
-				$.info(`尊贵的屌丝😑用户${nickname}`);
+				$.info(`尊贵的用户${nickname}`);
 			}
 			$.wait(1000)
 			await getTaskPage();
