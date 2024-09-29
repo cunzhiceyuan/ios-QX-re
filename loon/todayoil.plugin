@@ -8,7 +8,7 @@
 
 
 [Argument]
-appName = input,"浙江油价",tag=app 的名字,desc=填写 app 的用户名，用于提交 app 的相关信息
+appName = input,"浙江油价",tag=app 的名字
 appCategory = select,"Tool",tag=app 的分类
 cron = input,"30 8 * * *",tag=定时任务时间,desc=定时任务的 cron 表达式
 
