@@ -1,5 +1,5 @@
 // 默认重庆
-var region = $config.getValue('oil_price_region') || "chongqing";
+var region = $config.getValue('oil_price_region') || "zhejiang";
 
 const query_addr = `http://m.qiyoujiage.com/${region}.shtml`;
 
