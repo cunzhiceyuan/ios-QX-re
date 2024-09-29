@@ -1,0 +1,11 @@
+#!name=部分域名需要连接外网的
+#!desc=节点优选手动
+#!icon=https://img.downkuai.com/logo/20240119/82b6edaee1a2f35110bd2dd4872353ff.png
+#!openUrl = 
+[Rule]
+DOMAIN-SUFFIX,volceapplog.com,REJECT
+DOMAIN-SUFFIX,bonree.com,REJECT
+DOMAIN-SUFFIX,m.youzan.com,REJECT
+DOMAIN-SUFFIX,is.gd,节点优选手动
+DOMAIN-SUFFIX,v2ex.com,节点优选手动
+DOMAIN-SUFFIX,glitch.me,节点优选手动
