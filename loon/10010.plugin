@@ -7,7 +7,7 @@
 #!system = ios,tvos,macos
 #!system_version = 300
 #!loon_version = 3.2.1(734)
-#!tag = 官方,Demo
+#!tag = token and cron
 
 [Argument]
 appName = input,"100010qd",tag=app的名字,desc=填写app的用户名，用于提交app的相关信息
