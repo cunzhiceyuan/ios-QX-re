@@ -1,12 +1,25 @@
-#!name=shunfenyangmao_2
-#!desc=shunfenyangmao_2
-#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/60/8b/fc/608bfc12-b976-86c1-6c1f-8da9663e6553/AppIcon-1x_U007emarketing-0-5-0-0-85-220-0.png/350x350.png?
-#!openUrl = https://apps.apple.com/cn/app/%E9%A1%BA%E4%B8%B0%E9%80%9F%E8%BF%90-%E5%BF%AB%E9%80%92%E6%9F%A5%E5%AF%84%E6%94%B6-%E4%B8%8D%E6%AD%A2%E6%98%AF%E5%BF%AB/id899529698
+#!name = 顺丰速运插件
+#!desc = 用于处理顺丰速运相关功能的插件
+#!author = 
+#!homePage = 
+#!data = 2024-09-29
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/60/8b/fc/608bfc12-b976-86c1-6c1f-8da9663e6553/AppIcon-1x_U007emarketing-0-5-0-0-85-220-0.png/350x350.png?
+#!system = 
+#!system_version =
+#!loon_version = 
+#!tag = cron
+
+[Argument]
+appName = input,"顺丰速运插件",tag=app 的名字,desc=填写 app 的用户名，用于提交 app 的相关信息
+appCategory = select,"Tool",tag=app 的分类
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择 app 是否支持中文
+cron = input,"10 0 * * *",tag=定时任务时间,desc=定时任务的 cron 表达式
+cookieScriptEnable = switch,true,tag=是否启用获取 cookie 的脚本
+
 [Script]
-http-response ^https:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/shunfenyangmao_2.js, requires-body=true, timeout=60, tag=顺丰速运获取token
+cron {cron} script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/shunfenyangmao_2.js, tag=顺丰羊毛,argument=[{appName}],enable =true
 
-
-cron "10 0 * * *" script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/shunfenyangmao_2.js, tag=顺丰羊毛
+http-response ^https:\/\/mcs-mimp-web.sf-express.com\/mcs-mimp\/share\/weChat\/shareGiftReceiveRedirect.+ script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/shunfenyangmao_2.js, requires-body=true, timeout=60, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable},tag=顺丰数据
 
 [MITM]
 hostname = mcs-mimp-web.sf-express.com

@@ -1,17 +1,28 @@
-#!name=10010联通获取token（app）task对应余量
-#!desc=10010
-#!icon=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/icon.png
+#!name = 10010 联通获取 token 优化版
+#!desc = 更高效地获取 10010 联通应用的 token 及对应余量信息
+#!author = ChinaTelecomOperators[https://github.com/ChinaTelecomOperators/ChinaUnicom]
+#!homePage = https://github.com/ChinaTelecomOperators/ChinaUnicom
+#!data = 2024-09-29
+#!icon = https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/icon.png
 #!openUrl = https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/tag/Prerelease-Alpha
+#!system = ios,tvos,macos
+#!loon_version = 
 #!tag = token and cron
 
+[Argument]
+appName = input,"10010 联通优化版",tag=app 的名字,desc=填写 app 的名称，默认为"10010 联通优化版"
+appCategory = select,"Utility",tag=app 的分类,desc=选择 app 的分类，默认为"Utility"
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择 app 是否支持中文，默认为支持
+cron = input,"15 6 * * *",tag=定时任务时间,desc=设置定时任务的 cron 表达式，默认为每天 6 点 15 分
+cookieScriptEnable = switch,true,tag=是否启用获取 cookie 的脚本
 
 [Script]
-http-request ^https?:\/\/10010v4\.com script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js, requires-body=true, timeout=60, tag=10010
+cron "15 6 * * *" script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js, argument=[{appName},{appCategory},{isSupportChinese}], tag=联通定时用量, enable=true
+http-request ^https?:\/\/10010v4\.com script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js, requires-body=true, timeout=60, tag=10010_request,enable={cookieScriptEnable}
+http-response ^https?:\/\/m\.client\.10010\.com\/mobileService\/onLine\.htm script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010_capture.js, requires-body=true, timeout=60, tag=10010_capture,enable={cookieScriptEnable}
 
-http-response ^https?:\/\/m\.client\.10010\.com\/mobileService\/onLine\.htm script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010_capture.js, requires-body=true, timeout=60, tag=10010_capture
-
-cron "23 11 * * *" script-path=https://github.com/ChinaTelecomOperators/ChinaUnicom/releases/download/Prerelease-Alpha/10010.js, tag=联通定时用量
-
+[Rule]
+# 此处可根据需要添加规则
 
 [MITM]
 hostname = 10010v4.com, m.client.10010.com
