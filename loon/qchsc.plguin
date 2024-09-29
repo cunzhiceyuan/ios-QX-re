@@ -1,17 +1,29 @@
-#!name=七彩虹商城
-#!desc=七彩虹商城 微信小程序
-#!icon=https://vfiles.gtimg.cn/wupload/xy/wx_mini_program/2lo0rNOT.jpg
-#!keyword=羊毛
-#!tags=token and cron
-#!openurl = 
+#!name = 七彩虹商城插件
+#!desc = 用于处理七彩虹商城相关功能的插件
+#!author = 
+#!homePage = 
+#!data = 2024-09-29
+#!icon = https://vfiles.gtimg.cn/wupload/xy/wx_mini_program/2lo0rNOT.jpg
+#!system = 
+#!system_version =
+#!loon_version = 
+#!tag = cron
+
+[Argument]
+appName = input,"七彩虹商城插件",tag=app 的名字,desc=填写 app 的用户名，用于提交 app 的相关信息
+appCategory = select,"Tool",tag=app 的分类
+isSupportChinese = switch,true,tag=是否支持中文,desc=选择 app 是否支持中文
+cron = input,"7 8,20 * * *",tag=定时任务时间,desc=定时任务的 cron 表达式
+cookieScriptEnable = switch,true,tag=是否启用获取 cookie 的脚本
+
 [Script]
-http-request ^https:\/\/shopapi\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token
+cron {cron} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, tag=七彩虹商城,argument=[{appName}],enable =true
 
-http-request ^https:\/\/shopapitest\.skycolorful\.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token2
+http-request ^https:\/\/shopapi.skycolorful.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable},tag=七彩虹商城_获取 token1
 
-http-request ^https:\/\/shop\.skycolorful\.com:45677\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, tag=七彩虹商城_获取token3
+http-request ^https:\/\/shopapitest.skycolorful.com\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable},tag=七彩虹商城_获取 token2
 
-cron "7 8,20 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, timeout=3600, tag=七彩虹商城
+http-request ^https:\/\/shop.skycolorful.com:45677\/api\/User\/DecryptPhoneNumber script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/Colorful/Colorful.js, requires-body=true, argument=[{appName},{appCategory},{isSupportChinese}],enable = {cookieScriptEnable},tag=七彩虹商城_获取 token3
 
 [MITM]
 hostname = shopapi.skycolorful.com, shopapitest.skycolorful.com, shop.skycolorful.com:45677
