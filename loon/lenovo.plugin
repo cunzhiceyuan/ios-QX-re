@@ -15,7 +15,7 @@ cronScriptEnable = switch,true,tag=是否启用执行的的脚本
   [Script]
  http-response ^https:\/\/mmembership\.lenovo\.com\.cn\/member-hp-webapi\/v1\/user\/getUserProfileInformation script-path=https://gist.githubusercontent.com/Sliverkiss/b9eaf7c8d98df06087851c3e1d5040cf/raw/lenovo.js, requires-body=true, timeout=60, tag=联想赚金豆获取token,enable = {cookieScriptEnable}
 
-cron {cron} script-path=https://gist.githubusercontent.com/Sliverkiss/b9eaf7c8d98df06087851c3e1d5040cf/raw/lenovo.js，tag = 联想获取金豆,argument=[{appName}],enable = {cronScriptEnable}
+cron {cron} script-path=https://gist.githubusercontent.com/Sliverkiss/b9eaf7c8d98df06087851c3e1d5040cf/raw/lenovo.js, tag = 联想获取金豆,argument=[{appName}],enable = {cronScriptEnable}
 
   [MITM]
  hostname = mmembership.lenovo.com.cn
