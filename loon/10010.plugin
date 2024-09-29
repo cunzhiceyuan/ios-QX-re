@@ -23,7 +23,7 @@ http-request ^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign script-p
 
 http-request ^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/main/100010/10010.cookie.js,  timeout=60, tag=10010.cookie
 
-cron {cron} script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/cron.js,tag  = cronExample,argument=[{appName}],enable=true
+cron {cron} script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/cron.js,tag  = 100010签到,argument=[{appName}],enable=true
 
 [MITM]
 hostname = act.10010.com, m.client.10010.com
