@@ -1,0 +1,17 @@
+#!name=naixue
+#!desc=奈雪的茶
+#!icon=https://images.squarespace-cdn.com/content/v1/5ea21c3eceb3872be319913c/1590674707521-RDVD4XXTL9F8BBAUB0WY/logo.png
+#!openUrl = 微信小程序
+#!tag = token and cron
+#!date = 2024-9-29
+[Argument]
+appName = input,"奈雪点单",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"5 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+[Script]
+http-request ^https:\/\/tm-web\.pin-dao\.cn\/user\/base-userinfo script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js, requires-body=true, timeout=60, tag=奈雪点单获取token,enable = {cookieScriptEnable}
+
+cron {cron} script-path=https://gist.githubusercontent.com/Sliverkiss/4d0e9572b99530b7cb0e7298622aa2a9/raw/naixue.js,tag= 运行签到
+[MITM]
+hostname = tm-web.pin-dao.cn

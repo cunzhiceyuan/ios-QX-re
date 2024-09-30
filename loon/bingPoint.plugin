@@ -1,0 +1,20 @@
+#!name=bingPoint
+#!desc=Bing积分-lowking-v2.3.5 记得到boxjs里面设置每日任务重置时间，不设置默认每天早上8点
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/df/5d/10/df5d10e4-c044-9149-f8b6-fead7cb709f9/AppIcon-0-0-1x_U007ephone-0-0-sRGB-85-220.png/350x350.png?
+#!openUrl = https://apps.apple.com/cn/app/%E5%BE%AE%E8%BD%AF%E5%BF%85%E5%BA%94/id1114765817
+#!tag = token and cron
+#!date = 2024-9-29
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input, "0 10 0 * * ?",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+[Script]
+# > Bing积分
+http-request https:\/\/rewards\.bing\.com script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js, tag=Bing积分cookie,enable = {cookieScriptEnable}
+
+cron  {cron} script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js, tag=Bing积分
+
+[MITM]
+hostname = rewards.bing.com
