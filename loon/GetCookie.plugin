@@ -20,31 +20,31 @@ ScriptEnable6 = switch,true,tag=是否启用脚本:贴吧_获取cookie1、贴吧
 http-request ^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/member\/(signin\/usersign|sign\/current) script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/famijia/famijia_checkin.js, timeout=60, tag=famijia_checkin Fa米家_获取cookie,enable = {ScriptEnable1}
 
 # Luka_获取cookie
-http-request ^https?:\/\/luka\-graphql\.ling\.cn\/graphql\/mobile\?operation=UserInfoWithPendingRobotQuery script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/luka/luka_signin.js, timeout=60, tag=luka_signin,enable = {ScriptEnable2}
+http-request ^https?:\/\/luka\-graphql\.ling\.cn\/graphql\/mobile\?operation=UserInfoWithPendingRobotQuery script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/luka/luka_signin.js, timeout=60, tag=luka_signin Luka_获取cookie,enable = {ScriptEnable2}
 
 
 # 什么值得买_获取cookie
-http-request ^https?:\/\/user-api\.smzdm\.com\/checkin$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js, timeout=60, tag=smzdm_daily,enable = {ScriptEnable3}
+http-request ^https?:\/\/user-api\.smzdm\.com\/checkin$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js, timeout=60, tag=smzdm_daily 什么值得买_获取cookie,enable = {ScriptEnable3}
 
 
 # 叮咚买菜_获取cookie
-http-request ^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js, timeout=60, tag=dingdong_checkin,enable = {ScriptEnable4}
+http-request ^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js, timeout=60, tag=dingdong_checkin 叮咚买菜_获取cookie,enable = {ScriptEnable4}
 
 
 # 慢慢买_获取cookie
-http-request ^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js, requires-body=true, timeout=60, tag=manmanbuy_checkin,enable = {ScriptEnable5}
+http-request ^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js 慢慢买_获取cookie, requires-body=true, timeout=60, tag=manmanbuy_checkin,enable = {ScriptEnable5}
 
 
 # 贴吧_获取cookie1
-http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=tieba_signin,enable = {ScriptEnable6}
+http-request https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=tieba_signin 贴吧_获取cookie1,enable = {ScriptEnable6}
 
 
 # 贴吧_获取cookie2
-http-request ^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=tieba_signin,enable = {ScriptEnable6}
+http-request ^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=tieba_signin 贴吧_获取cookie2,enable = {ScriptEnable6}
 
 
 # 贴吧_获取cookie3
-http-request ^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=tieba_signin,enable = {ScriptEnable6}
+http-request ^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=tieba_signin 贴吧_获取cookie3,enable = {ScriptEnable6}
 
 
 [MITM]
