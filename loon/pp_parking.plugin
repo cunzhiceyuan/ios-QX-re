@@ -1,0 +1,26 @@
+#!name=pp_parking
+#!desc=pp_parking
+#!icon=https://raw.githubusercontent.com/FoKit/Scripts/main/images/pp_parking.png
+
+#!openUrl = https://apps.apple.com/cn/app/id943328239
+#!tag = token and cron
+#!date = 2024-9-29
+#!author = 
+#!homePage = 
+
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"17 7 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+
+
+
+[MITM]
+hostname = api.660pp.com
+
+[Script]
+http-request ^https:\/\/api\.660pp\.com\/rest\/[\d\.]+?\/user\/token tag=PP 停车#, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/pp_parking.js,requires-body=0,enable = {cookieScriptEnable}
+
+cron {cron} script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/pp_parking.js,tag = PP 停车,enable=true

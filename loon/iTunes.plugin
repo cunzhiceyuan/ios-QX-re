@@ -1,0 +1,17 @@
+#!name=iTunes
+#!desc=chxm1023-iTunes解锁
+#!icon = 
+#!openUrl = 已解锁App传送门：https://too.st/iTunes
+#!tag = 功能解锁
+#!date = 2024-9-29
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用全部脚本
+
+
+[Script]
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body=true, timeout=60, tag=iTunes,enable = {ScriptEnable}
+
+[MITM]
+hostname = buy.itunes.apple.com

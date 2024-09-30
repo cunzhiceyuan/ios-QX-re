@@ -1,0 +1,17 @@
+#!name=油条口语
+#!desc=YTKY
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b7/97/b9/b797b970-6ff4-d9f8-ce17-c6019a12e61f/AppIcon-0-0-1x_U007epad-0-10-0-0-85-220.png/350x350.png?
+#!openUrl = https://apps.apple.com/cn/app/%E6%B2%B9%E6%9D%A1%E5%8F%A3%E8%AF%AD-%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%AD-%E9%9B%85%E6%80%9D%E5%8F%A3%E8%AF%AD-%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/id6446980778
+#!tag = 功能解锁
+#!date = 2024-9-29
+#!author = 
+#!homePage = 
+
+
+
+
+[Script]
+http-response ^https?:\/\/www\.youtiaotalk\.com\/api\/user\/detail script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/YTKY.js, requires-body=true, timeout=60, tag=口语解锁
+
+[MITM]
+hostname = www.youtiaotalk.com

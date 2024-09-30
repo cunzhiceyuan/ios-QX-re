@@ -1,0 +1,29 @@
+#!name=喜马拉雅每日签到
+#!desc =喜马拉雅每日签到
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/64/34/e9/6434e9d8-22fb-cbd2-c9ce-cb9476fbb85c/AppIcon-0-1x_U007emarketing-0-7-0-0-sRGB-85-220-0.png/350x350.png?
+#!openUrl = https://apps.apple.com/cn/app/%E5%96%9C%E9%A9%AC%E6%8B%89%E9%9B%85-%E5%90%AC%E4%B9%A6%E7%A4%BE%E5%8C%BA-%E7%94%B5%E5%8F%B0%E6%9C%89%E5%A3%B0%E5%B0%8F%E8%AF%B4%E7%9B%B8%E5%A3%B0%E8%AF%84%E4%B9%A6/id876336838
+#!tag = token and cron
+#!date = 2024-9-29
+#!author = 
+#!homePage = 
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"35 8 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+
+
+
+
+
+[Script]
+# 获取喜马拉雅任务需要的各项参数
+http-request ^https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/app-skin-service\/skin\/ script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js, timeout=60, tag=喜马拉雅签到脚本token,enable = {cookieScriptEnable}
+
+cron {cron} script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js , tag=喜马拉雅签到脚本
+
+
+
+[MITM]
+hostname = mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com

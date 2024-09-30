@@ -1,0 +1,13 @@
+#!name=95598
+#!desc=用于scriptable组件，网上国网电费查询
+#!icon=http://www.sgcc.com.cn/sites/sgcc/images/inlogo.png
+#!openUrl = 
+#!tag = token and cron
+#!date = 20240808
+#!author = 
+#!homePage = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/boxjs.json
+[Script]
+http-request ^https?:\/\/api\.example\.com\/electricity\/bill\/all script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.scriptable.js, requires-body=true, timeout=60, tag=网上国网小组件数据更新接口
+
+[MITM]
+hostname = api.example.com

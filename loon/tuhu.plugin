@@ -1,0 +1,25 @@
+#!name=途虎
+#!desc=进入途虎养车小程序积分页面即可获取 Token
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e8/4f/73/e84f73b5-3d47-ebdd-d9b8-4af76ca85e22/AppIcon-1x_U007emarketing-0-7-0-0-85-220-0.png/350x350.png?
+#!openUrl = https://apps.apple.com/cn/app/id943708006
+#!tag = token and cron
+#!date = 2024-9-29
+#!author = 
+#!homePage = https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
+
+
+[Argument]
+appName = input,"途虎",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"17 7 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+
+
+
+[MITM]
+hostname = api.tuhu.cn
+
+[Script]
+http-request https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo tag=途虎养车#, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js,requires-body=0,enable = {cookieScriptEnable}
+
+cron {cron} script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/tuhu.js,tag = 途虎养车,enable=true

@@ -1,0 +1,25 @@
+#!name=获取霸王茶姬小程序Qm-User-Token
+#!desc=bwcj_token
+#!icon=https://www.szairport.com/szairport/kftp/202404/2953e2c236c44bd18dcf8a35d681b4bf/images/b8bc9250ea8343419fcb2154b624389d.jpg
+#!openUrl = 微信小程序
+#!tag = token and cron
+#!date = 2024-9-29
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"5 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+
+
+
+
+[Script]
+http-request ^https?:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering2-apiserver\/customer-suggest\/query-feedback-config|catering\/crm\/points-info) script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js, timeout=60, tag=bwcj_token,enable = {cookieScriptEnable}
+
+cron {cron} script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js,imeout=60, tag=霸王茶姬运行签到
+
+
+
+[MITM]
+hostname = qmwebapi.qmai.cn, webapi.qmai.cn

@@ -1,0 +1,14 @@
+#!name=时光序
+#!desc=shiguangxu
+#!openUrl = https://apps.apple.com/cn/app/id1343731648
+#!icon = http://pic.hncj.com/up/2022-11/20221111748358663.png
+#!tag = 功能解锁
+#!date = 2024-9-29
+#!author = 
+#!homePage = 
+
+[Script]
+http-response ^https:\/\/api\.weilaizhushou\.com\/base\/user\/vip\/getUserVip script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/shiguangxu.js, requires-body=true, timeout=60, tag=shiguangxu
+
+[MITM]
+hostname = api.weilaizhushou.com

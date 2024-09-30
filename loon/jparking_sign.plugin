@@ -1,0 +1,23 @@
+#!name=脚本名称：捷停车签到
+#!desc=活动入口：捷停车APP-停车币签到
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/35/c4/7535c410-394a-bd11-0b85-07a2a95dc0ed/AppIcon-1x_U007emarketing-0-5-0-0-sRGB-85-220-0.png/350x350.png?
+#!openUrl = https://apps.apple.com/cn/app/id1071487344
+#!homePage = https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
+#!tag = token and cron
+#!date = 2024-9-29
+
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"15 9 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+
+
+
+[MITM]
+hostname = sytgate.jslife.com.cn
+
+cron {cron} script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, tag=捷停车签到
+
+http-request ^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, requires-body=true, timeout=10, enabled=false, tag=获取捷停车userId,enable = {cookieScriptEnable}

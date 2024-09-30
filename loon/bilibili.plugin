@@ -1,0 +1,33 @@
+#!name=BiliBili每日等级任务
+#!desc=定时任务及Cookie获取
+#!author= MartinsKing（@ClydeTime）
+#!homepage= https://github.com/ClydeTime/BiliBili/tree/master
+#!icon=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/database/icon_Avatar.png
+#!category= MK
+# 现将获取cookie与定时任务合并为一个模块
+# 保持开启,如检测到cookie变更会自动更新,解决cookie经常过期的问题(cookie仍有效不提醒更新)
+# 任务奖励：经验值/硬币/大会员积分/年度会员领取B币等
+# ================ Boxjs订阅 ================
+# 订阅地址：https://raw.githubusercontent.com/ClydeTime/BiliBili/main/boxjs/BiliBili.boxjs.json
+# 更新时间：2023-06-02
+
+
+[Argument]
+appName = input,"BiliBili每日等级任务",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"30 7 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+
+
+
+
+[Script]
+# BiliBili每日等级任务
+cron {cron} script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站每日等级任务
+
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(APP),enable = {cookieScriptEnable}
+
+http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(网页),enable = {cookieScriptEnable}
+
+[MITM]
+hostname = app.bilibili.com, m.bilibili.com
