@@ -1,5 +1,5 @@
-#!name=hzh
-#!desc=华住会
+#!name=华住会
+#!desc=适配loon-需要app获取token
 #!icon = https://ows-cdn.huazhu.com/ows-official/pc/img/logo-word.png
 #!openUrl = 
 #!tag = 
