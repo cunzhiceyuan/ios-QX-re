@@ -1,8 +1,8 @@
 #!name=华住会
 #!desc=适配loon-需要app获取token
 #!icon = https://ows-cdn.huazhu.com/ows-official/pc/img/logo-word.png
-#!openUrl = 
-#!tag = 
+#!openUrl = https://apps.apple.com/cn/app/id556808349
+#!tag = token and cron
 #!date = 2024-9-29
 [Argument]
 appName = input,"华住会",tag=app的名字
