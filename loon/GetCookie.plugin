@@ -17,7 +17,7 @@ ScriptEnable6 = switch,true,tag=是否启用脚本:贴吧_获取cookie1、贴吧
 
 [Script]
 # Fa米家_获取cookie
-http-request ^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/member\/(signin\/usersign|sign\/current) script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/famijia/famijia_checkin.js, timeout=60, tag=famijia_checkin,enable = {ScriptEnable1}
+http-request ^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/member\/(signin\/usersign|sign\/current) script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/famijia/famijia_checkin.js, timeout=60, tag=famijia_checkin Fa米家_获取cookie,enable = {ScriptEnable1}
 
 # Luka_获取cookie
 http-request ^https?:\/\/luka\-graphql\.ling\.cn\/graphql\/mobile\?operation=UserInfoWithPendingRobotQuery script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/luka/luka_signin.js, timeout=60, tag=luka_signin,enable = {ScriptEnable2}
