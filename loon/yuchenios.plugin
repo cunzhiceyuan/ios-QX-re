@@ -1,7 +1,7 @@
 #!name=ios游戏迷
 #!desc=ios游戏迷 签到 积分可以兑换苹果付费游戏账号
 #!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1089.png
-#!openUrl = https://yuchen.tonghuaios.com?tg=add3ea3f
+#!openUrl =https://yuchen.tonghuaios.com/users?tab=credit
 #!tag = token and cron
 #!date = 2024-9-29
 #!author = 
