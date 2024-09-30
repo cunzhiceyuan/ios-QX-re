@@ -1,0 +1,28 @@
+#!name = 彩云天气
+#!desc = 正常打开box.js设置彩云令牌(不是链接！！！）尝试集成在插件中
+#!author = @author: Peng-YM
+#!homePage = https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js
+#!data = 2024-08-09
+#!icon = https://raw.githubusercontent.com/Loon0x00/Loon0x00.github.io/main/static/img/loon.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 官方,Demo
+
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"10 8-22/2 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+@caiyun.token.caiyun= input,"Loon",tag=彩云令牌（自行输入）
+@caiyun.token.tencent= input,"AHEBZ-ASTWX-CIW4P-7TV7T-AWKLS-7CFWP",tag=彩云用的腾讯地图令牌
+@caiyun.display_location = select,"true","flase",tag=是否在日志中显示经纬度
+@caiyun.location.latitude = input,"30",tag=彩云维度30
+@caiyun.location.longitude=  input,"120",tag=彩云经度120
+@caiyun.address = input,“{"nation":"中国","province":"浙江省","city":"杭州市","district":"临安区","street":"发达路","street_number":""}”,tag= 更改中文字
+
+[Script]
+cron {cron} script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js,tag = 彩云天气
+
+
+
