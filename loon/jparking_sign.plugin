@@ -17,7 +17,7 @@ cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
 
 [MITM]
 hostname = sytgate.jslife.com.cn
-
+[script]
 cron {cron} script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, tag=捷停车签到
 
 http-request ^https:\/\/sytgate\.jslife\.com\.cn\/core-gateway\/order\/carno\/pay\/info script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jparking_sign.js, requires-body=true, timeout=10, enabled=false, tag=获取捷停车userId,enable = {cookieScriptEnable}
