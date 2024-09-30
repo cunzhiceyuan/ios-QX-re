@@ -1,4 +1,4 @@
-#!name=慢慢买
+#!name=美团
 #!desc=meituan
 #!icon=https://pp.myapp.com/ma_icon/0/icon_11385461_1727400148/256
 #!openUrl = https://apps.apple.com/ru/app/id933106331
@@ -6,7 +6,7 @@
 #!date = 2024-9-29
 
 [Argument]
-appName = input,"慢慢买",tag=app的名字
+appName = input,"美团",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 cron = input,"6 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
 cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
