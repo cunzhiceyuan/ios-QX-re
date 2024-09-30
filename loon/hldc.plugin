@@ -1,5 +1,5 @@
-#!name=hldc
-#!desc=hldc
+#!name=哈罗单车
+#!desc=适配loon
 #!icon = https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/Hldc.png
 #!openUrl = https://apps.apple.com/us/app/id1165227346
 #!tag = token and cron
