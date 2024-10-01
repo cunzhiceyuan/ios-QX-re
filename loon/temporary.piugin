@@ -1,5 +1,5 @@
 [Script]
-http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/adapty.js, requires-body=true, timeout=60, tag=adapty应用：Sketchar-AR画图应用等
+http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/adapty.js, requires-body=true, timeout=60, tag=adapty应用：Sketchar-AR画图应用等,enable = {ScriptEnable1}
 
 [MITM]
 hostname = api.adapty.io
@@ -24,28 +24,36 @@ hostname = api.adapty.io
 appName = input,"Loon",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 cron = input,"",tag=定时任务时间,desc=定时任务的cron表达式
-cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+ScriptEnable1 = switch,true,tag=是否启用脚本
 cronScriptEnable = switch,true,tag=是否启用执行的的脚本
 
 
-cookieScriptEnable1 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable1}
-cookieScriptEnable2 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable2}
-cookieScriptEnable3 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable3}
-cookieScriptEnable4 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable4}
-cookieScriptEnable5 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable5}
-cookieScriptEnable6 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable6}
-cookieScriptEnable7 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable7}
-cookieScriptEnable8 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable8}
-cookieScriptEnable9 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable9}
-cookieScriptEnable10 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable10}
-cookieScriptEnable11 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable11}
-cookieScriptEnable12 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable12}
-cookieScriptEnable13 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable13}
-cookieScriptEnable14 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable14}
-cookieScriptEnable15 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable15}
-cookieScriptEnable16 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable16}
-cookieScriptEnable17 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable17}
-cookieScriptEnable18 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable18}
+ScriptEnable1 = switch,true,tag=是否启用1脚本	,enable = {ScriptEnable1}
+ScriptEnable2 =	switch,true,tag=是否启用2脚本	,enable = {ScriptEnable2}
+ScriptEnable3 =	switch,true,tag=是否启用3脚本	,enable = {ScriptEnable3}
+ScriptEnable4 =	switch,true,tag=是否启用4脚本	,enable = {ScriptEnable4}
+ScriptEnable5 =	switch,true,tag=是否启用5脚本	,enable = {ScriptEnable5}
+ScriptEnable6 =	switch,true,tag=是否启用6脚本	,enable = {ScriptEnable6}
+ScriptEnable7 =	switch,true,tag=是否启用7脚本	,enable = {ScriptEnable7}
+ScriptEnable8 =	switch,true,tag=是否启用8脚本	,enable = {ScriptEnable8}
+ScriptEnable9 =	switch,true,tag=是否启用9脚本	,enable = {ScriptEnable9}
+ScriptEnable10 =	switch,true,tag=是否启用10脚本	,enable = {ScriptEnable10}
+ScriptEnable11 =	switch,true,tag=是否启用11脚本	,enable = {ScriptEnable11}
+ScriptEnable12 =	switch,true,tag=是否启用12脚本	,enable = {ScriptEnable12}
+ScriptEnable13 =	switch,true,tag=是否启用13脚本	,enable = {ScriptEnable13}
+ScriptEnable14 =	switch,true,tag=是否启用14脚本	,enable = {ScriptEnable14}
+ScriptEnable15 =	switch,true,tag=是否启用15脚本	,enable = {ScriptEnable15}
+ScriptEnable16 =	switch,true,tag=是否启用16脚本	,enable = {ScriptEnable16}
+ScriptEnable17 =	switch,true,tag=是否启用17脚本	,enable = {ScriptEnable17}
+ScriptEnable18 =	switch,true,tag=是否启用18脚本	,enable = {ScriptEnable18}
+ScriptEnable19 =	switch,true,tag=是否启用19脚本	,enable = {ScriptEnable19}
+ScriptEnable20 =	switch,true,tag=是否启用20脚本	,enable = {ScriptEnable20}
+ScriptEnable21 =	switch,true,tag=是否启用21脚本	,enable = {ScriptEnable21}
+ScriptEnable22 =	switch,true,tag=是否启用22脚本	,enable = {ScriptEnable22}
+ScriptEnable23 =	switch,true,tag=是否启用23脚本	,enable = {ScriptEnable23}
+ScriptEnable24 =	switch,true,tag=是否启用24脚本	,enable = {ScriptEnable24}
+ScriptEnable25 =	switch,true,tag=是否启用25脚本	,enable = {ScriptEnable25}
+
 
 
 
