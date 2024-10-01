@@ -15,7 +15,7 @@ http-request https?:\/\/omts\.tc\.qq\.com\/[^\s]+\.m3u8(\?[^\s]*)? script-path=h
 
 
 
-
+#https://apps.apple.com/app/id6448330325
 
 http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, requires-body=true, timeout=60, tag=防拍卫士-针孔摄像头探测器,,enable = {ScriptEnable4}
 
