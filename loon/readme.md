@@ -27,3 +27,11 @@ https://icon.yukonga.top/
 
 [MitM]
 hostname = api?.zongheng.com
+
+
+
+
+
+
+
+https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/read-news-mony.plugin
