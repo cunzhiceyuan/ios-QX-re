@@ -1,0 +1,42 @@
+#!name = AI沈水模型全家桶解锁永久🆅🅸🅿
+#!desc =各个应用下载地址：
+ai恋爱：https://apps.apple.com/app/id6473818362
+ai修图：https://apps.apple.com/app/id6474470112
+ai写作：https://apps.apple.com/us/app/id6472239528
+ai绘画：https://apps.apple.com/us/app/id6473333043
+ai律师：https://apps.apple.com/us/app/id6468904850
+ai翻译：https://apps.apple.com/us/app/id6474531632
+#!icon = http://pic.downyi.com/upload/2021-5/20215181625277457.png
+#!openUrl = https://apps.apple.com/vc/developer/suzhou-junhao-network-technology-co-ltd/id1710874453
+#!tag = 功能解锁
+#!date = 2024-9-29
+#!author = https://github.com/Rnik666/YJTJS/blob/main/AISSMX.js
+
+
+
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable1 = switch,true,tag=是否启用：AI写作功能
+ScriptEnable2 = switch,true,tag=是否启用：AI绘图功能
+ScriptEnable3 = switch,true,tag=是否启用：AI翻译功能
+ScriptEnable4 = switch,true,tag=是否启用：AI恋爱功能
+ScriptEnable5 = switch,true,tag=是否启用：AI修图功能
+ScriptEnable6 = switch,true,tag=是否启用：AI律师功能
+
+[Script]
+http-response ^https?:\/\/xiezuo\.szjunhaotech\.com\/user script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/AISSMX.js, requires-body=true, timeout=60, tag=AI写作,enable = {ScriptEnable1}
+
+http-response ^https?:\/\/huitu\.zongyionline\.com\/user script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/AISSMX.js, requires-body=true, timeout=60, tag=AI绘图,enable = {ScriptEnable2}
+
+http-response ^https?:\/\/fanyi\.zongyionline\.com\/user script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/AISSMX.js, requires-body=true, timeout=60, tag=AI翻译,enable = {ScriptEnable3}
+
+http-response ^https?:\/\/lianai\.zongyionline\.com\/user script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/AISSMX.js, requires-body=true, timeout=60, tag=AI恋爱,enable = {ScriptEnable4}
+
+http-response ^https?:\/\/xiutu\.zongyionline\.com\/user script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/AISSMX.js, requires-body=true, timeout=60, tag=AI修图,enable = {ScriptEnable5}
+
+http-response ^https?:\/\/lushi\.zongyionline\.com\/user script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/AISSMX.js, requires-body=true, timeout=60, tag=AI律师,enable = {ScriptEnable6}
+
+[MITM]
+hostname = huitu.zongyionline.com, fanyi.zongyionline.com, lianai.zongyionline.com, xiutu.zongyionline.com, lushi.zongyionline.com, xiezuo.szjunhaotech.com
