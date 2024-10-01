@@ -14,7 +14,7 @@ hostname = api.adapty.io
 
 
 #!name = 临时脚本
-#!desc =看见好用的、实用的js文件或者插件，保存与此，后期再做整理
+#!desc =看见好用的、实用的js文件或者插件，保存与此，后期再做整理,会有bug！
 #!icon = https://img3.jiemian.com/101/original/20160106/145206685748812800_a640x364.jpg
 #!openUrl = https://github.com/cunzhiceyuan/ios-QX-re/edit/main/loon/temporary.piugin
 #!tag = demo
