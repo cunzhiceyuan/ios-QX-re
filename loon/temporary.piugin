@@ -20,8 +20,13 @@ http-request https?:\/\/omts\.tc\.qq\.com\/[^\s]+\.m3u8(\?[^\s]*)? script-path=h
 http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, requires-body=true, timeout=60, tag=防拍卫士-针孔摄像头探测器,,enable = {ScriptEnable4}
 
 http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, timeout=60, tag=防拍卫士-针孔摄像头探测器,enable = {ScriptEnable4}
+
+
+# >途灵随行—情侣定位家庭位置共享（永久会员）
+http-response ^https?:\/\/locnew-api.shoujicad.com.+\/api\/user$ script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/tlsx.js, requires-body=true, timeout=60, tag=途灵随行,enable = {ScriptEnable5}
+
 [MITM]
-hostname = api.adapty.io,man.api.mansenwenhua77.com,omts.tc.qq.com, 111.229.140.167:8762,api.revenuecat.com
+hostname = api.adapty.io,man.api.mansenwenhua77.com,omts.tc.qq.com, 111.229.140.167:8762,api.revenuecat.com,locnew-api.shoujicad.com
 
 
 
