@@ -1,16 +1,21 @@
 [Script]
 http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/adapty.js, requires-body=true, timeout=60, tag=adapty应用：Sketchar-AR画图应用等,enable = {ScriptEnable1}
 
-[MITM]
-hostname = api.adapty.io
-
-
-[Script]
 # >漫森短剧
-http-response ^https?:\/\/man.api.mansenwenhua77.com\/app\/(my-home\/user\/info|login\/apple) script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/msdj.js, requires-body=true, timeout=60, tag=漫森短剧msdj,,enable = {ScriptEnable2}
+http-response ^https?:\/\/man.api.mansenwenhua77.com\/app\/(my-home\/user\/info|login\/apple) script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/msdj.js, requires-body=true, timeout=60, tag=漫森短剧msdj,enable = {ScriptEnable2}
 
+
+
+#App内
+http-response http://111.229.140.167:8762/apptov5/v1/vod/getVod script-path=https://raw.githubusercontent.com/Alex0510/Eric/refs/heads/master/surge/Script/wm4k.js, requires-body=true, timeout=60, tag=wm4k,,enable = {ScriptEnable3}
+
+#投屏
+http-request https?:\/\/omts\.tc\.qq\.com\/[^\s]+\.m3u8(\?[^\s]*)? script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/lsp/wm4k.js, timeout=60, tag=wm4k,,enable = {ScriptEnable3}
 [MITM]
-hostname = man.api.mansenwenhua77.com
+hostname = api.adapty.io,man.api.mansenwenhua77.com,omts.tc.qq.com, 111.229.140.167:8762
+
+
+
 
 
 
