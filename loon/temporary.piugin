@@ -5,7 +5,12 @@ http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|i
 hostname = api.adapty.io
 
 
+[Script]
+# >漫森短剧
+http-response ^https?:\/\/man.api.mansenwenhua77.com\/app\/(my-home\/user\/info|login\/apple) script-path=https://raw.githubusercontent.com/WeiGiegie/666/main/msdj.js, requires-body=true, timeout=60, tag=漫森短剧msdj,,enable = {ScriptEnable2}
 
+[MITM]
+hostname = man.api.mansenwenhua77.com
 
 
 
