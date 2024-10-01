@@ -11,8 +11,17 @@ http-response http://111.229.140.167:8762/apptov5/v1/vod/getVod script-path=http
 
 #投屏
 http-request https?:\/\/omts\.tc\.qq\.com\/[^\s]+\.m3u8(\?[^\s]*)? script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/lsp/wm4k.js, timeout=60, tag=wm4k,,enable = {ScriptEnable3}
+
+
+
+
+
+
+http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, requires-body=true, timeout=60, tag=防拍卫士-针孔摄像头探测器,,enable = {ScriptEnable4}
+
+http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, timeout=60, tag=防拍卫士-针孔摄像头探测器,enable = {ScriptEnable4}
 [MITM]
-hostname = api.adapty.io,man.api.mansenwenhua77.com,omts.tc.qq.com, 111.229.140.167:8762
+hostname = api.adapty.io,man.api.mansenwenhua77.com,omts.tc.qq.com, 111.229.140.167:8762,api.revenuecat.com
 
 
 
