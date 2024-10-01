@@ -1,5 +1,5 @@
 [Script]
-http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/adapty.js, requires-body=true, timeout=60, tag=adapty
+http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/adapty.js, requires-body=true, timeout=60, tag=adapty应用：Sketchar-AR画图应用等
 
 [MITM]
 hostname = api.adapty.io
