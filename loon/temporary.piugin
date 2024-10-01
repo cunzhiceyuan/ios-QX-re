@@ -1,0 +1,45 @@
+#!name = 临时脚本
+#!desc =看见好用的、实用的js文件或者插件，保存与此，后期再做整理
+#!icon = https://img3.jiemian.com/101/original/20160106/145206685748812800_a640x364.jpg
+#!openUrl = https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/qchsc.plguin
+#!tag = 
+#!date = 2024-9-29
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+cron = input,"5 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+
+//cookieScriptEnable1 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable1}
+//cookieScriptEnable2 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable2}
+//cookieScriptEnable3 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable3}
+//cookieScriptEnable4 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable4}
+//cookieScriptEnable5 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable5}
+//cookieScriptEnable6 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable6}
+//cookieScriptEnable7 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable7}
+//cookieScriptEnable8 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable8}
+//cookieScriptEnable9 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable9}
+//cookieScriptEnable10 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable10}
+//cookieScriptEnable11 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable11}
+//cookieScriptEnable12 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable12}
+//cookieScriptEnable13 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable13}
+//cookieScriptEnable14 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable14}
+//cookieScriptEnable15 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable15}
+//cookieScriptEnable16 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable16}
+//cookieScriptEnable17 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable17}
+//cookieScriptEnable18 = switch,true,tag=是否启用获取cookie的脚本	,enable = {cookieScriptEnable18}
+
+
+
+
+
+[Script]
+http-request ^https://nsloon\.app script-path = https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/plugin_arg.js,argument=[{appName},{appCategory},{isSupportChinese}],tag=plugin_arg_demo_request,enable = {cookieScriptEnable}
+
+cron {cron} script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/cron.js,tag = cronExample,argument=[{appName}],enable = {cronScriptEnable}
+
+[MITM]
+hostname = nsloon.app
