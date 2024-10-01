@@ -24,8 +24,8 @@ hostname = api.adapty.io
 appName = input,"Loon",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 cron = input,"",tag=定时任务时间,desc=定时任务的cron表达式
-ScriptEnable1 = switch,true,tag=是否启用脚本
-cronScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+
 
 
 ScriptEnable1 = switch,true,tag=是否启用1脚本	,enable = {ScriptEnable1}
