@@ -38,13 +38,15 @@ http-response ^https:\/\/app\.autocad360\.com\/entitlements\/v2\/me\/status,scri
 
 
 #发型多多
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/FXDD.js, requires-body=true, timeout=60, tag=发型多多,enable = {ScriptEnable49}
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Rnik666/YJTJS/main/FXDD.js, requires-body=true, timeout=60, tag=发型多多,enable = {ScriptEnable9}
 
+#抠图软件https://apps.apple.com/app/id1601814248
+http-response ^http[s]?:\/\/kt.jiaofei8.cn\/api\/user\/my script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/jiaofei8.js, requires-body=true, timeout=60, tag=抠图软件,enable = {ScriptEnable10}
 
 
 
 [MITM]
-hostname = api.adapty.io,man.api.mansenwenhua77.com,omts.tc.qq.com, 111.229.140.167:8762,api.revenuecat.com,locnew-api.shoujicad.com,api.qingning6.com,lcs-mobile-cops.adobe.io,app.autocad360.com,buy.itunes.apple.com
+hostname = api.adapty.io,man.api.mansenwenhua77.com,omts.tc.qq.com, 111.229.140.167:8762,api.revenuecat.com,locnew-api.shoujicad.com,api.qingning6.com,lcs-mobile-cops.adobe.io,app.autocad360.com,buy.itunes.apple.com,kt.jiaofei8.cn
 
 
 
