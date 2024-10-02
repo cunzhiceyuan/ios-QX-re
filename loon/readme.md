@@ -1,4 +1,11 @@
 https://app.diandian.com/app/yo8uvu97w00vgi9/ios?market=1&country=24&system=4&id=1373567447https://static.diandian.com/_app/img/app-empty.a40d759.png
+https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/
+
+
+
+
+
+
 
 
 
