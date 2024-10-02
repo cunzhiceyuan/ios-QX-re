@@ -6,7 +6,7 @@
 #!date = 2024-9-29
 #!author = https://t.me/xzxxn777      //账号密码需要前往boxjs按要求填写，一键添加：
 #!homePage = http://boxjs.com/#/sub/add/https://raw.githubusercontent.com/xzxxn777/Surge/main/xzxxn.json
-
+#!loon_version = 3.2.3(757)
 
 [Argument]
 appName = input,"Loon",tag=app的名字
@@ -19,22 +19,31 @@ cron5 = input,"12 10,17 * * *",tag=望潮·定时任务时间,desc=定时任务�
 cron6 = input,"1 8,17 * * *",tag=竞舟·定时任务时间,desc=定时任务的cron表达式
 cron7 = input,"1 8,17 * * *",tag=青椒·定时任务时间,desc=定时任务的cron表达式
 cron8 = input,"1 10 * * *",tag=爱路桥·定时任务时间,desc=定时任务的cron表达式
+cronScriptEnable1 = switch,true,tag=是否启用·读嘉·执行的的脚本
+cronScriptEnable2 = switch,true,tag=是否启用·慈晓·执行的的脚本
+cronScriptEnable3 = switch,true,tag=是否启用·嘉善·执行的的脚本
+cronScriptEnable4 = switch,true,tag=是否启用·大潮·执行的的脚本
+cronScriptEnable5 = switch,true,tag=是否启用·望潮·执行的的脚本
+cronScriptEnable6 = switch,true,tag=是否启用·竞舟·执行的的脚本
+cronScriptEnable7 = switch,true,tag=是否启用·青椒·执行的的脚本
+cronScriptEnable8 = switch,true,tag=是否启用·爱路桥·执行的的脚本
+
 
 
 [Script]
 
-cron {cron1} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DuJia/DuJia.js, timeout=60, tag=读嘉·app手动领奖
+cron {cron1} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DuJia/DuJia.js, timeout=60, tag=读嘉·app手动领奖,enable = {cronScriptEnable1}
 
-cron  {cron2}  script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/CiXiao/CiXiao.js, timeout=60, tag=慈晓·需要浙江IP
+cron  {cron2}  script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/CiXiao/CiXiao.js, timeout=60, tag=慈晓·需要浙江IP,enable = {cronScriptEnable2}
 
-cron  {cron3}  script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JiaShan/JiaShan.js, timeout=60, tag=嘉善
+cron  {cron3}  script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JiaShan/JiaShan.js, timeout=60, tag=嘉善,enable = {cronScriptEnable3}
 
-cron  {cron4} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DaChao/DaChao.js, timeout=60, tag=大潮
+cron  {cron4} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/DaChao/DaChao.js, timeout=60, tag=大潮,enable = {cronScriptEnable4}
 
-cron {cron5}  script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WangChao/WangChao.js, timeout=60, tag=望潮
+cron {cron5}  script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/WangChao/WangChao.js, timeout=60, tag=望潮,enable = {cronScriptEnable5}
 
-cron  {cron6}  script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingZhou/JingZhou.js, timeout=60, tag=竞舟·需要浙江ip
+cron  {cron6}  script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JingZhou/JingZhou.js, timeout=60, tag=竞舟·需要浙江ip,enable = {cronScriptEnable6}
 
-cron  {cron7} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/QingJiao/QingJiao.js, timeout=60, tag=青椒·app手动领奖
+cron  {cron7} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/QingJiao/QingJiao.js, timeout=60, tag=青椒·app手动领奖,enable = {cronScriptEnable7}
 
-cron {cron8} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/AiLuQiao/AiLuQiao.js, timeout=60, tag=爱路桥积分签到
+cron {cron8} script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/AiLuQiao/AiLuQiao.js, timeout=60, tag=爱路桥积分签到,enable = {cronScriptEnable8}
