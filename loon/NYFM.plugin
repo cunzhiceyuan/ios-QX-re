@@ -1,0 +1,28 @@
+
+#!name = NYMF
+#!desc = 美区降级：V1.5.2
+#!author = 
+#!homePage = https://t.me/yqc_777/783540
+#!data = 2024-08-09
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/5b/e5/755be5e6-c2c8-ce05-51d0-9549ddc3f119/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.jpeg/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+
+
+#!name=NYFM
+#!desc=NYFM
+#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Naruto/Naruto-1041.png
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用脚本
+
+
+[Script]
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/NYFM.js, requires-body=true, timeout=60, tag=NYFM,enable = {ScriptEnable}
+
+[MITM]
+hostname = buy.itunes.apple.com
