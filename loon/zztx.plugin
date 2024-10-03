@@ -1,0 +1,16 @@
+#!name=杂志天下
+#!desc=杂志天下解锁
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e3/41/66/e34166b8-7dc6-f20c-4351-f46696ce7416/AppIcon-0-0-1x_U007epad-0-10-0-85-220.png/1024x1024.png
+#!homepage=https://whatshub.top
+#!author=
+#!openUrl = https://apps.apple.com/app/id1582110447
+
+
+
+[Script]
+http-response ^http[s]?:\/\/www.fuyoutech.club\/magworld\/member\/status requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/fuyoutech.js
+
+
+
+[MITM]
+hostname = www.fuyoutech.club
