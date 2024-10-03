@@ -8,5 +8,5 @@ DOMAIN-SUFFIX,bonree.com,REJECT
 DOMAIN-SUFFIX,m.youzan.com,REJECT
 DOMAIN-SUFFIX,is.gd,proxy
 DOMAIN-SUFFIX,v2ex.com,proxy
-
+DOMAIN-SUFFIX,sec.sginput.qq.com,REJECT
 DOMAIN-SUFFIX,voillh.xyz,proxy
