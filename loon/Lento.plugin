@@ -1,0 +1,22 @@
+#!name = Lento壁纸
+#!desc = 壁纸软件
+#!author = chxm1023
+#!homePage = https://t.me/chxm1023/2229
+#!data = 2024-10-03
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/22/03/eb/2203eb21-3b9d-c701-63ba-e9f6d5a971ab/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag =功能解锁
+#!openUrl = https://apps.apple.com/us/app/id1590670758
+
+[Argument]
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+
+[Script]
+http-response ^https?:\/\/lentoapp\.com:8081\/getUserMemberShipInfo script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/lento.js, requires-body=true, timeout=60, tag=lento壁纸,enable = {ScriptEnable}
+
+[MITM]
+hostname = lentoapp.com
