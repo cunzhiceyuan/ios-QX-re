@@ -12,10 +12,6 @@
 #!tag = 功能解锁
 
 
-#!name=NYFM
-#!desc=NYFM
-#!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Naruto/Naruto-1041.png
-
 [Argument]
 appName = input,"Loon",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
