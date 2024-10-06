@@ -1,4 +1,4 @@
-#!name=部分域名需要连接外网的
+#!name=自定义部分域名需要连接外网的
 #!desc=建议节点优选
 #!icon=https://img.downkuai.com/logo/20240119/82b6edaee1a2f35110bd2dd4872353ff.png
 #!openUrl = https://github.com/cunzhiceyuan/ios-QX-re/blob/main/loon/zhizhi-proxy.plugin
@@ -10,3 +10,4 @@ DOMAIN-SUFFIX,v2ex.com,proxy
 DOMAIN-SUFFIX,sec.sginput.qq.com,REJECT
 DOMAIN-SUFFIX,voillh.xyz,proxy
 DOMAIN-SUFFIX,aiplusapp.com,proxy
+DOMAIN-SUFFIX,v2ex.com,proxy
