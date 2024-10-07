@@ -5,8 +5,12 @@
 #!tag = 功能解锁
 #!date = 2024-9-29
 #!author = https://github.com/Rnik666/YJTJS/blob/main/AISSMX.js
-
-
+[rule]
+DOMAIN-SUFFIX,fanyi.zongyionline.com,proxy
+DOMAIN-SUFFIX,lianai.zongyionline.com,proxy
+DOMAIN-SUFFIX,xiutu.zongyionline.com,proxy
+DOMAIN-SUFFIX,lushi.zongyionline.com,proxy
+DOMAIN-SUFFIX,xiezuo.szjunhaotech.com,proxy
 
 
 [Argument]
