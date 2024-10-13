@@ -1,0 +1,23 @@
+#!name = 万康人体解剖
+#!desc = 解剖软件专为医疗从业者、医学生、医学教育者和人体解剖爱好者打造，基于人卫人体解剖学教材设计了系统解剖，局部解剖，医学视频几个板块。（Requires iOS 13.0 or later.）
+#!author = 仅供学习交流, 严禁商业用途
+#!homePage = https://t.me/chxm1023/2267
+#!openUrl = https://apps.apple.com/app/id6480260145
+#!data = 2024-10-13
+#!icon =https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6e/26/e4/6e26e443-c088-4e03-f010-0815b8decfa1/AppIcon-0-0-1x_U007ephone-0-0-85-220.png/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+
+
+[Argument]
+appName = input,"万康人体解剖",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+[Script]
+http-response ^https:\/\/wankang\.xlhcq\.com\/v1\/user_info script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wk.js, requires-body=true, timeout=60, tag=wk,enable = {ScriptEnable}
+
+[MITM]
+hostname = wankang.xlhcq.com
