@@ -1,0 +1,22 @@
+#!name = 解螺旋
+#!desc = 解螺旋（www.helixlife.cn），中国临床医生的数字化、智能化学术成长平台。
+#!author = 仅供学习交流, 🈲️商业用途
+#!homePage = https://t.me/afengye
+#!openUrl = https://apps.apple.com/us/app/id1527692254
+#!data = 2024-08-09
+#!icon =https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1d/41/32/1d413206-27aa-7bf1-06f2-9a3b4453a515/AppIcon-0-0-1x_U007emarketing-0-10-0-0-85-220.png/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+
+[Argument]
+appName = input,"解螺旋",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+[Script]
+http-response ^https:\/\/(app|api)\.helixlife\.cn\/api\/v1\/(user\/(users\/profile|overviews)|edu\/(trainings|courses|meeting_lives)|public\/search) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Jieluoxuan.js, requires-body=true, timeout=60, tag=解螺旋,enable = {ScriptEnable}
+
+[MITM]
+hostname = *.helixlife.cn
