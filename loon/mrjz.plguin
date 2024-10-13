@@ -1,0 +1,22 @@
+#!name = 每日减脂
+#!desc = 每日减脂-食物热量查询体重体脂率查询记录软件
+#!author = afengye：仅供学习交流, 🈲️商业用途
+#!homePage = https://t.me/afengye
+#!openUrl = https://apps.apple.com/app/id6499197912
+#!data = 2024-08-09
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/65/4e/bb/654ebb18-91c4-345f-9502-f3c1010ce68e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+
+[Argument]
+appName = input,"Loon",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+[Script]
+http-response ^https:\/\/fastdiet\.incmoon\.com\/dailyFastDiet\/user\/info script-path=https://raw.githubusercontent.com/afengye/QX/main/mrjz.js, requires-body=true, timeout=60, tag=每日减脂解锁,enable = {ScriptEnable}
+
+[MITM]
+hostname = fastdiet.incmoon.com
