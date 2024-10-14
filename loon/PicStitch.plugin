@@ -1,0 +1,23 @@
+#!name = Pic Stitch：Auto Screenshot
+#!desc = StitchPics、HD Web Snapshot
+#!author = 仅供学习交流, 严禁商业用途
+#!homePage = 
+#!openUrl = https://apps.apple.com/us/app/id1658935259
+#!data = 2024-10-13
+#!icon =https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/20/11/3e/20113e83-195b-ec93-42c5-d92f42ce6d96/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+
+
+[Argument]
+appName = input,"滚动截图",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+[Script]
+http-response ^https:\/\/appss\.rhinoxlab\.com\/app\/account\/getAccountInfo script-path=https://raw.githubusercontent.com/afengye/QX/main/gdjcp.js, requires-body=true, timeout=60, tag=滚动截图,enable = {ScriptEnable}
+
+[MITM]
+hostname = appss.rhinoxlab.com
