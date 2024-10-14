@@ -6,20 +6,20 @@ http-response ^https?:\/\/man.api.mansenwenhua77.com\/app\/(my-home\/user\/info|
 
 
 
-#App内
-http-response http://111.229.140.167:8762/apptov5/v1/vod/getVod script-path=https://raw.githubusercontent.com/Alex0510/Eric/refs/heads/master/surge/Script/wm4k.js, requires-body=true, timeout=60, tag=wm4k,,enable = {ScriptEnable3}
+#完美4k解锁VIP免费看--Eric
+http-response http://111.229.140.167:8762/apptov5/v1/vod/getVod script-path=https://raw.githubusercontent.com/Alex0510/Eric/refs/heads/master/surge/Script/wm4k.js, requires-body=true, timeout=60, tag=wm4k-1,,enable = {ScriptEnable3}
 
-#投屏
-http-request https?:\/\/omts\.tc\.qq\.com\/[^\s]+\.m3u8(\?[^\s]*)? script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/lsp/wm4k.js, timeout=60, tag=wm4k,,enable = {ScriptEnable3}
+#投屏 完美4k解锁VIP免费看--Eric
+http-request https?:\/\/omts\.tc\.qq\.com\/[^\s]+\.m3u8(\?[^\s]*)? script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/lsp/wm4k.js, timeout=60, tag=wm4k-2,,enable = {ScriptEnable3}
 
 
 
 
 #https://apps.apple.com/app/id6448330325
 
-http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, requires-body=true, timeout=60, tag=防拍卫士-针孔摄像头探测器,enable = {ScriptEnable4}
+http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, requires-body=true, timeout=60, tag=防拍卫士-针孔摄像头探测器1,enable = {ScriptEnable4}
 
-http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, timeout=60, tag=防拍卫士-针孔摄像头探测器,enable = {ScriptEnable4}
+http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/afengye/QX/main/fpws.js, timeout=60, tag=防拍卫士-针孔摄像头探测器2,enable = {ScriptEnable4}
 
 
 # >途灵随行—情侣定位家庭位置共享（永久会员）
