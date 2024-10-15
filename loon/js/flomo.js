@@ -2,7 +2,7 @@
  * flomo
 
 [rewrite_local]
-^https:\/\/flomoapp\.com\/api\/v1\/user\/me url script-analyze-echo-response flomo.js
+^https:\/\/flomoapp\.com\/api\/v1\/user\/me url script-analyze-echo-response https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/js/flomo.js
 
 [mitm]
 hostname = flomoapp.com
