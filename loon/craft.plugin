@@ -1,6 +1,23 @@
+#!name = craft笔记
+#!desc =
+#!author = 仅供学习交流, 严禁商业用途
+#!homePage = https://t.me/chxm1023/2280
+#!openUrl = https://apps.apple.com/app/id1487937127
+#!data = 2024-10-13
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/92/cf/f8/92cff8b3-1023-a741-4bbc-54bc40ea3d06/AppIcon-0-0-1x_U007epad-0-0-0-9-0-0-P3-85-220.png/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+
+
+[Argument]
+appName = input,"craft",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用执行的的脚本
 
 [Script]
-http-response ^https?:\/\/(api|docs)\.craft\.do\/(api\/)?(auth\/v\d\/profile|subscription\/(receipt|teams\/get-subscriptions)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Craft.js, requires-body=true, timeout=60, tag=Craft
+http-response ^https?:\/\/(api|docs)\.craft\.do\/(api\/)?(auth\/v\d\/profile|subscription\/(receipt|teams\/get-subscriptions)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Craft.js, requires-body=true, timeout=60, tag=Craft ,enable = {ScriptEnable}
 
 [MITM]
 hostname = api.craft.do
