@@ -14,11 +14,11 @@ appName = input,"flomo",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 ScriptEnable = switch,true,tag=是否启用执行的的脚本
 
-
+[Script]
+http-response ^https:\/\/flomoapp\.com\/api\/v1\/user\/me requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/flomo.js,enable = {ScriptEnable}
 
 
 
 [MITM]
 hostname = flomoapp.com
-[Script]
-http-response ^https:\/\/flomoapp\.com\/api\/v1\/user\/me requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/flomo.js,enable = {ScriptEnable}
+
