@@ -1,5 +1,5 @@
 #!name = flomo
-#!desc = 浮墨笔记 - 备忘、便签、日记
+#!desc = 浮墨笔记 - 备忘、便签、日记（需要一直开启）
 #!author = 仅供学习交流,严禁商业用途
 #!homePage = 
 #!openUrl =https://apps.apple.com/app/id1552314395
@@ -15,8 +15,10 @@ appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 ScriptEnable = switch,true,tag=是否启用执行的的脚本
 
 
-[Script]
-http-request ^https:\/\/flomoapp\.com\/api\/v1\/user\/me script-path=https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/js/flomo.js, requires-body=true, timeout=60, tag=flomo,enable = {ScriptEnable}
+
+
 
 [MITM]
 hostname = flomoapp.com
+[Script]
+http-response ^https:\/\/flomoapp\.com\/api\/v1\/user\/me requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/flomo.js,enable = {ScriptEnable}
