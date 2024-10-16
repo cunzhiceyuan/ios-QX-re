@@ -25,7 +25,7 @@
 
 
 [Argument]
-appName = input,"万康人体解剖",tag=app的名字
+appName = input,"52pj",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 cron = input,"5 15 * * *",tag=定时任务时间,desc=定时任务的cron表达式
 cronScriptEnable = switch,true,tag=是否启用cron脚本
