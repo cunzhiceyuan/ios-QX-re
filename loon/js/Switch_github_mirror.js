@@ -6,7 +6,7 @@ let githubPrefix = "https://raw.githubusercontent.com/"
 let fastrawPrefix = "https://fastraw.ixnic.net/" //由FastGit群组成员 @duya1234567 提供，代号A镜像。
 let hubinceptPrefix = "https://hub.incept.pw/" // 由FastGit群组成员 @mxe365 提供，代号B镜像。
 let mirrorghproxy = "https://mirror.ghproxy.com/" // 由FastGit群组成员 @mxe365 提供，代号E镜像。
-// let kkgithubPrefix = "https://raw.kkgithub.com/" //由KGithub提供，暂时失效。
+let kkgithubPrefix = "https://raw.kkgithub.com/" //由KGithub提供，暂时失效。
 
 //1: fastraw.ixnic.net 2.hub.incept.pw 3.raw.kkgithub.com
 let changeTo = $persistentStore.read("镜像源")
