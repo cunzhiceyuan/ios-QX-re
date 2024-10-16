@@ -1,27 +1,16 @@
 
 
 #!name = 吾爱破解
-#!desc = 脚本说明：
- • 吾爱破解每日签到：每天自动签到，轻松获取论坛积分，提升您的账户等级与权限。
- • 因账户强制掉登录，故Cookie有效期大概一周左右。
- • "部分内容参考来源" (https://github.com/NobyDa/Script/blob/master/52pojie-DailyBonus/52pojie.js)  "文章借鉴来源" (https://github.com/qd-today/templates/issues/34)
-使用方法：
- 1. 获取Cookie：
- • 访问 吾爱破解 (https://www.52pojie.cn/home.php) ，登录账户后，
-开启重写抓取 Cookie，运行Cron即可。
- 2. Node.js环境说明：
- • Node.js环境下需安装 “got” 与 “iconv-lite” 模块。比如命令：npm install got iconv-lite -g。
- • 填写 WUAI_COOKIE 环境变量，完成后即可运行签到脚本。
- • 如需调试模式，请将环境变量 WUAI_DEBUG 设置为 true。
+#!desc = 【脚本说明】：• 吾爱破解每日签到：每天自动签到，轻松获取论坛积分，提升您的账户等级与权限。 • 因账户强制掉登录，故Cookie有效期大概一周左右。 • "部分内容参考来源" (https://github.com/NobyDa/Script/blob/master/52pojie-DailyBonus/52pojie.js)  "文章借鉴来源" (https://github.com/qd-today/templates/issues/34)     【使用方法】：1. 获取Cookie：• 访问 吾爱破解 (https://www.52pojie.cn/home.php) ，登录账户后，开启重写抓取 Cookie，运行Cron即可。2. Node.js环境说明： • Node.js环境下需安装 “got” 与 “iconv-lite” 模块。比如命令：npm install got iconv-lite -g。• 填写 WUAI_COOKIE 环境变量，完成后即可运行签到脚本。• 如需调试模式，请将环境变量 WUAI_DEBUG 设置为 true。【搭配boxjs】：https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/boxjs.json
 #!author = https://t.me/NobyDa/899
-#!homePage = 
+#!homePage = http://boxjs.com/#/sub/add/https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/boxjs.json
 #!openUrl = https://www.52pojie.cn/
-#!data = 2024-10-13
+#!data = 2024-10-16
 #!icon =https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png
 #!system = 
 #!system_version = 
 #!loon_version = 
-#!tag = 功能解锁
+#!tag = token and cron
 
 
 [Argument]
