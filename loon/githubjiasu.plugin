@@ -15,7 +15,7 @@
 DOMAIN, fastraw.ixnic.net, DIRECT
 DOMAIN, hub.incept.pw, DIRECT
 DOMAIN, raw.kkgithub.com, DIRECT
-
+DOMAIN, mirror.ghproxy.com, DIRECT
 [Script]
 http-request ^https:\/\/raw\.githubusercontent\.com\/ script-path = https://raw.githubusercontent.com/cunzhiceyuan/ios-QX-re/refs/heads/main/loon/js/Switch_github_mirror.js, tag = GitHub加速
 
