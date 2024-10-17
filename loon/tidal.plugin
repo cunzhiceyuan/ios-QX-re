@@ -1,0 +1,28 @@
+#!name = TIDAL Music: HiFi Sound
+#!desc = 解锁 Master 音质（非国区）
+#!author = 
+#!homePage = https://t.me/yqc_123
+#!data = 
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/78/68/94/786894b6-211b-5a61-3ed5-7b1aada57361/AppIcon-0-0-1x_U007epad-0-0-85-220.png/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+#!openUrl = https://itunes.apple.com/us/app/tidal/id913943275
+
+
+[Argument]
+appName = input,"tidal",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+
+ScriptEnable = switch,true,tag=是否启用获取cookie的脚本
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[Script]
+http-response ^https?:\/\/api\.tidal\.com\/v1\/users\/\d+\/subscription.+ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/TIDALHiFiPlusCrack.js, requires-body=true, timeout=60, tag=TIDALHiFiPlusCrack,enable = {ScriptEnable}
+
+http-request ^https?:\/\/api\.tidal\.com\/v1\/tracks/\d+\/playbackinfo script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/tidal.js, requires-body=true, timeout=60, tag=tidal,enable = {ScriptEnable}
+
+[MITM]
+hostname = api.tidal.com
