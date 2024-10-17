@@ -11,13 +11,13 @@ appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
 ScriptEnable1 = switch,true,tag=是否启用cookie脚本
 ScriptEnable2 = switch,true,tag=是否启用运行脚本
 
-
+cron = input,"5 0,18 * * *",tag=定时任务时间,desc=定时任务的cron表达式
 
 
 [Script]
 http-response ^https:\/\/msmarket\.msx\.digitalyili\.com\/gateway\/api\/auth\/account\/user\/info script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, requires-body=true, tag=伊利_获取token,enable = {ScriptEnable1}
 
-cron "5 0,18 * * *" script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, tag=伊利-国庆,enable = {ScriptEnable2}
+cron{cron}script-path=https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/YiLi/YiLi.js, timeout=3600, tag=伊利-国庆,enable = {ScriptEnable2}
 
 [MITM]
 hostname = msmarket.msx.digitalyili.com
