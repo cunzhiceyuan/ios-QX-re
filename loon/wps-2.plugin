@@ -1,0 +1,25 @@
+#!name = WPS每日签到2
+#!desc = WPS每日签到并兑换会员，需要进入此插件的主页链接，阅读使用说明操作。
+#!openUrl = https://apps.apple.com/app/id599852710
+#!author = 参考小白脸，抓cookie(手机用qx，loon，surge等可以自动抓cookie，请自行配置)用手机或者电脑进入https://vip.wps.cn/home登录后，找到cookie里面的wps_sid，格式如下：# 青龙环境变量     wps_pc_val = {"cookie":"wps_sid=xxxxxxxxxxxx"}
+#!tag = token and cron
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(749)
+#!homepage = https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Loon/Plugin/WPS_checkin.plugin
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WPS.png
+#!date = 2024-10-13 17:59:50
+
+[Argument]
+cookieScriptEnable = switch, false, true, tag = 捕获Cookie, desc = 此开关控制插件是否捕获Cookie
+cronScriptEnable = switch, false, true, tag = 捕获Cookie, desc = 此开关控制插件是否捕获Cookie
+
+CRONEXP = input, "0 8 * * *", tag = 定时参数, desc = 这里需要输入符合CRON表达式的参数
+
+[Script]
+http-request ^https:\/\/(vip|account)(userinfo|\.wps\.cn\/p\/auth\/check)$ script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/wps.js, timeout=60, tag=wps,enable = {cookieScriptEnable}
+
+cron {CRONEXP} script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/wps.js, timeout=120, tag=WPS_PC签到,enable = {cronScriptEnable}
+
+[MitM]
+hostname = *.wps.cn
