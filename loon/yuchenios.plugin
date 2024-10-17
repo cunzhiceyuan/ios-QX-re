@@ -1,16 +1,16 @@
 #!name=ios游戏迷-雨晨
-#!desc=ios游戏迷 签到 积分可以兑换苹果付费游戏账号。注意组合2：在boxjs填写账号#密码，多账号用&分割，如账号1#密码1&账号2#密码2：https://gist.githubusercontent.com/Sliverkiss/18bd01be356360a8065a21ea71685ad3/raw/sliverkiss.boxjs.json
+#!desc=ios游戏迷 签到 积分可以兑换苹果付费游戏账号。注意组合1可以自动获取token（已经失效）；组合2：在boxjs填写账号#密码，多账号用&分割，如账号1#密码1&账号2#密码2，配合boxjs：https://gist.githubusercontent.com/Sliverkiss/18bd01be356360a8065a21ea71685ad3/raw/sliverkiss.boxjs.json
 #!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1089.png
-#!openUrl =https://yuchen.tonghuaios.com/users?tab=credit
+#!openUrl =https://yc.yuchengyouxi.com/
 #!tag = token and cron
 #!date = 2024-9-29
-#!author = 
-#!homePage = 
+#!author = 膜拜樱花大佬！！！！
+#!homePage = https://t.me/NobyDa_Chat/1814725
 
 [Argument]
 appName = input,"雨晨iOS",tag=app的名字
 appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
-cron1 = input,"9 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cron1 = input,"9 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式·组合1
 cookieScriptEnable1 = switch,true,tag=是否启用获取cookie的脚本·组合1
 cronScriptEnable1 = switch,true,tag=是否启用执行cron的脚本·组合1
 
@@ -18,7 +18,7 @@ cronScriptEnable1 = switch,true,tag=是否启用执行cron的脚本·组合1
 
 cronScriptEnable2 = switch,true,tag=是否启用执行cron的脚本·组合2
 
-cron2 = input,"9 17 * * *",tag=定时任务时间,desc=定时任务的cron表达式
+cron2 = input,"9 16 * * *",tag=定时任务时间,desc=定时任务的cron表达式·组合2
 [Script]
 # 获取雨晨ios签到需要的各项参数
 http-request ^https:\/\/yuchen.tonghuaios.com\/users\?.+ script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js, timeout=60, tag=yuchenios·组合1,enable = {cookieScriptEnable1}
