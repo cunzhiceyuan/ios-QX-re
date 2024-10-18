@@ -1,0 +1,30 @@
+#!name = 手机通话录音机
+#!desc = 手机通话录音机解锁，需要试用一次 每次使用开启
+#!author = 仅供学习交流, 严禁商业用途
+#!homePage = https://t.me/chxm1023/2267
+#!openUrl = https://apps.apple.com/app/id573751328
+#!data = 2024-10-13
+#!icon =https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/68/34/e0/6834e01c-4766-dc60-c7ac-4c9f408b3e6c/AppIcon-0-0-1x_U007emarketing-0-2-0-sRGB-85-220.png/1024x1024.png
+#!system = 
+#!system_version = 
+#!loon_version = 
+#!tag = 功能解锁
+
+
+[Argument]
+appName = input,"通话录音",tag=app的名字
+appCategory = select,"Tool","Video&Photo","Game",tag=app的分类
+ScriptEnable = switch,true,tag=是否启用执行的的脚本
+
+
+
+[Script]
+http-response ^https:\/\/api\.tapeacall\.com\/v3\/receipt requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/sjthly.js,enable= {ScriptEnable }
+
+
+
+[MITM]
+hostname = api.tapeacall.com
+
+
+
