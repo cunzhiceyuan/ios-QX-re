@@ -19,7 +19,7 @@ ScriptEnable = switch,true,tag=是否启用执行的的脚本
 
 
 [Script]
-http-response ^https:\/\/api\.tapeacall\.com\/v3\/receipt requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/sjthly.js,enable= {ScriptEnable }
+http-response ^https:\/\/api\.tapeacall\.com\/v3\/receipt requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/sjthly.js,enable = {ScriptEnable}
 
 
 
